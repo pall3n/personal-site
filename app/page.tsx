@@ -83,11 +83,10 @@ export default function Home() {
 
         <section className="max-w-screen-lg mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 px-2 md:px-3">
           {work.map((item, index) => (
-            <div className="rounded-lg overflow-hidden">
+            <div className="rounded-lg overflow-hidden" key={index}>
               <img
                 src={item}
                 alt="Work example"
-                key={index}
                 className="w-full h-full object-cover"
               />
             </div>
