@@ -47,7 +47,7 @@ const pricing = [
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-white dark:bg-zinc-900">
       <main>
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
           <div className="flex flex-col">
@@ -58,10 +58,10 @@ export default function Home() {
               height={84}
               className="rounded-full"
             />
-            <h1 className="text-2xl font-bold text-zinc-800 mt-4">
+            <h1 className="text-2xl font-bold text-zinc-800 dark:text-zinc-50 mt-4">
               Patrick Allen
             </h1>
-            <div className="lg:text-lg text-zinc-500">
+            <div className="lg:text-lg text-zinc-500 dark:text-zinc-400">
               Senior Frontend Developer and UI Designer.
             </div>
           </div>
@@ -70,9 +70,9 @@ export default function Home() {
             {about.map((item, index) => (
               <div
                 key={index}
-                className=" lg:text-lg lg:leading-snug text-zinc-500"
+                className=" lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400"
               >
-                <span className="text-zinc-800 font-medium">
+                <span className="text-zinc-800 dark:text-zinc-50 font-medium">
                   {item.headline}&nbsp;
                 </span>
                 {item.body}
@@ -94,19 +94,21 @@ export default function Home() {
         </section>
 
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
-          <h2 className="text-2xl font-bold text-zinc-800">Pricing</h2>
+          <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-50">
+            Pricing
+          </h2>
 
           <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
             {pricing.map((item, index) => (
               <div key={index}>
-                <div className=" lg:text-lg lg:leading-snug text-zinc-500">
-                  <span className="text-zinc-800 font-medium">
+                <div className=" lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400">
+                  <span className="text-zinc-800 dark:text-zinc-50 font-medium">
                     {item.headline}&nbsp;
                   </span>
                   {item.body}
                 </div>
 
-                <div className="text-zinc-800 font-medium mt-2">
+                <div className="text-zinc-800 dark:text-zinc-50 font-medium mt-2">
                   {item.price}
                 </div>
               </div>
@@ -118,7 +120,7 @@ export default function Home() {
               href="https://calendly.com/heypatrick/30min"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-indigo-700 font-bold border border-indigo-200 bg-indigo-50 hover:bg-indigo-100 hover:border-indigo-300 hover:text-indigo-800 transition-all duration-300 px-5 py-3 rounded-md"
+              className="text-indigo-700 dark:text-indigo-100 font-bold border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900 hover:bg-indigo-100 dark:hover:bg-indigo-800 hover:border-indigo-300 hover:text-indigo-800 hover:dark:text-indigo-100 transition-all duration-300 px-5 py-3 rounded-md"
             >
               Request a Discovery Call
             </a>
@@ -126,8 +128,8 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-4 sm:py-6 px-8 mt-6 md:mt-12 border-t border-zinc-200">
-        <div className="text-sm text-zinc-500">
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-4 sm:py-6 px-8 mt-6 md:mt-12 border-t border-zinc-200 dark:border-zinc-800">
+        <div className="text-sm text-zinc-500 dark:text-zinc-400">
           Copyright © {new Date().getFullYear()} Patrick Allen. All rights
           reserved.
         </div>
