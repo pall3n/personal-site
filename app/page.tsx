@@ -36,7 +36,7 @@ const pricing = [
   {
     headline: "Day Rate / Monthly Retainer:",
     body: "For projects where the scope is loosely defined or if you are looking for an ongoing monthly contractor this could make the most sense.",
-    price: "£400 +VAT per day.",
+    price: "£450 +VAT per day.",
   },
   {
     headline: "Fixed Price:",
