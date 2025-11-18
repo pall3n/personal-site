@@ -1,6 +1,6 @@
 {
-  "/portfolio/print-evolved/page": "app/portfolio/print-evolved/page.js",
-  "/(home)/page": "app/(home)/page.js",
   "/portfolio/page": "app/portfolio/page.js",
+  "/(home)/page": "app/(home)/page.js",
+  "/portfolio/print-evolved/page": "app/portfolio/print-evolved/page.js",
   "/portfolio/snackable/page": "app/portfolio/snackable/page.js"
 }
