@@ -30,15 +30,15 @@ export default function ProjectList() {
         </h1>
       </div>
 
-      <div className="flex flex-col gap-6 md:gap-8- mt-6 sm:mt-8-">
+      <div className="flex flex-col gap-4 mt-6">
         {work.map((item, index) => (
           <Link
             href={item.href}
             key={index}
             className="group flex items-center justify-between lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400"
           >
-            <div className="flex gap-2">
-              <span className="italic text-zinc-400 dark:text-zinc-200 font-medium">
+            <div className="flex gap-1.5">
+              <span className="text-zinc-300 dark:text-zinc-200 font-semibold">
                 0{index + 1}.
               </span>
               <span className="text-zinc-800 dark:text-zinc-50 font-medium">

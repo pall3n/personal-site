@@ -1,10 +1,9 @@
-import PortfolioView from "../components/portfolioView";
-import Footer from "@/components/footer";
 import PortfolioViewHeader from "../components/portfolioViewHeader";
 import PortfolioViewSection from "../components/portfolioViewSection";
 import PortfolioViewFooter from "../components/portfolioViewFooter";
 import Text from "@/components/text";
 import Bullets from "@/components/bullets";
+import Footer from "@/components/footer";
 
 const project = {
   title: "Print Evolved - Internal Production Tools",
@@ -36,11 +35,6 @@ const project = {
 
   sections: [
     {
-      title: "About",
-      content: [
-        "A responsive web app for internal print operations teams to manage production workflows, batching and dispatch. I led design and front-end implementation from initial user journeys through to shipped UI and reusable components.",
-        "The goal was to replace ad-hoc spreadsheets and email threads with a single, reliable interface where operators could create batches, resolve conflicts and track jobs in real time.",
-      ],
       images: [
         {
           src: "/images/projects/print-evolved/sku/SKU-step-1.png",
@@ -67,20 +61,47 @@ const project = {
           alt: "SKU creation wizard step 6",
         },
       ],
-      caption:
-        "Screens from the batch creation and conflict resolution flows, including job selection, batch details and confirmation steps.",
     },
 
     {
-      title: "Problem",
-      content: [
-        "The original process for managing production and dispatch was spread across multiple older systems. This meant:",
-        "- Operators had to constantly context-switch between tools",
-        "- Jobs were easy to miss or duplicate",
-        "- There was no single view of what was in a batch or where it was in the process",
-
-        "As volume increased, this led to avoidable errors, late batches and a lot of stress for the operations team.",
+      images: [
+        {
+          src: "/images/projects/print-evolved/orders/orders-1.png",
+          alt: "Orders list",
+        },
+        {
+          src: "/images/projects/print-evolved/orders/orders-2.png",
+          alt: "Batch create invoices",
+        },
+        {
+          src: "/images/projects/print-evolved/orders/orders-3.png",
+          alt: "Batch create invoices - preview invoices",
+        },
       ],
+    },
+
+    {
+      images: [
+        {
+          src: "/images/projects/print-evolved/invoice/invoices-1.png",
+          alt: "Invoices list",
+        },
+        {
+          src: "/images/projects/print-evolved/invoice/invoices-2.png",
+          alt: "Add credit overlay",
+        },
+        {
+          src: "/images/projects/print-evolved/invoice/invoices-3.png",
+          alt: "Send invoice popover",
+        },
+        {
+          src: "/images/projects/print-evolved/invoice/invoices-4.png",
+          alt: "Paid invoice",
+        },
+      ],
+    },
+
+    {
       images: [
         {
           src: "/images/projects/print-evolved/batch/manual-batch-1.png",
@@ -103,67 +124,6 @@ const project = {
           alt: "Manual batch creation conflict",
         },
       ],
-
-      caption: "",
-    },
-
-    {
-      title: "Process",
-      content: [
-        "I started by shadowing operators on live jobs and mapping end-to-end journeys: from a job entering the system, through batching and printing, to final dispatch. We identified the core actions operators performed dozens of times a day (create batch, add/remove jobs, resolve conflicts, print paperwork) and the common points of friction.",
-        "From there, I sketched and prototyped the core flows in Figma, with a particular focus on:",
-        "- Manual batch creation (grouping jobs by destination, due date or production constraints)",
-        "- Conflict handling (when a job doesn’t fit a batch or has missing data)",
-        "- Dispatch and handover (clear status of what’s printed, packed and shipped)",
-        "We iterated these flows with the operations team to make sure the interface matched their mental model rather than forcing them to adapt to the tool.",
-
-        "Once the flows were validated, I formalised the UI into a small design system: table patterns, filters, batch cards, confirmation modals and status indicators. I implemented these as React components, documented in Storybook, so we could reuse them across new tools as the product expanded.",
-
-        "I implemented the frontend using Next.js, TypeScript and modern CSS, working closely with backend engineers to integrate APIs and handle edge cases. We refined the UI based on feedback from real-world usage, especially around error states and conflicts.",
-      ],
-      images: [
-        {
-          src: "/images/projects/print-evolved/invoice/invoices-1.png",
-          alt: "Print Evolved",
-        },
-        {
-          src: "/images/projects/print-evolved/invoice/invoices-2.png",
-          alt: "Print Evolved",
-        },
-        {
-          src: "/images/projects/print-evolved/invoice/invoices-3.png",
-          alt: "Print Evolved",
-        },
-        {
-          src: "/images/projects/print-evolved/invoice/invoices-4.png",
-          alt: "Print Evolved",
-        },
-      ],
-    },
-
-    {
-      title: "Results",
-      content: [
-        "Reduction in dispatch errors reported by the operations team.",
-        "A modern, single interface replacing duplicate systems for batching, printing and dispatch.",
-        "The UI components became the foundation for future internal tools, improving consistency and speed of development.",
-
-        "Designing for internal tools is as much about reducing cognitive load as it is about features. Spending time on edge cases, empty states and conflict handling early on led to a smoother rollout and fewer surprises in production.",
-      ],
-      images: [
-        {
-          src: "/images/projects/print-evolved/orders/orders-1.png",
-          alt: "Print Evolved",
-        },
-        {
-          src: "/images/projects/print-evolved/orders/orders-2.png",
-          alt: "Print Evolved",
-        },
-        {
-          src: "/images/projects/print-evolved/orders/orders-3.png",
-          alt: "Print Evolved",
-        },
-      ],
     },
   ],
 };
@@ -183,56 +143,149 @@ export default function PortfolioPrint() {
           <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
             {/* Section About */}
             <PortfolioViewSection
-              title={project.sections[0]?.title || ""}
+              title="Overview"
               images={project.sections[0]?.images || []}
-              caption={project.sections[0]?.caption || ""}
+              caption="Screens from the SKU creation wizard."
             >
-              {project.sections[0]?.content.map((item, index) => (
-                <Text key={index}>{item}</Text>
-              ))}
+              <Text>
+                Print Evolved relied on several ageing internal systems that
+                split logic across multiple tools. Operators had to jump between
+                interfaces depending on the customer, carrier or product —
+                creating confusion, inconsistent data and frequent
+                batching/dispatch errors.
+              </Text>
+
+              <div className="space-y-2">
+                <Text>
+                  I redesigned and rebuilt the internal platform as two modern,
+                  responsive apps with clear responsibilities:
+                </Text>
+
+                <Bullets
+                  items={[
+                    "Production → batching, conflict handling, printing, packing, dispatch",
+                    "Print → SKU creation, order management, customer rules, invoicing",
+                  ]}
+                />
+              </div>
+
+              <Text>
+                My role covered end-to-end UX, UI, prototyping, design systems
+                and React/Next.js implementation.
+              </Text>
             </PortfolioViewSection>
 
             {/* Section Problem */}
             <PortfolioViewSection
               title="Problem"
               images={project.sections[1]?.images || []}
-              caption={project.sections[1]?.caption || ""}
+              caption="Screens from the orders list with and batch invoice creation."
             >
-              <Text>
-                The original process for managing production and dispatch was
-                spread across multiple older systems. This meant:
-              </Text>
+              <div className="space-y-2">
+                <Text>
+                  Legacy systems had grown fragmented over time. Different parts
+                  of the workflow lived in different tools, meaning:
+                </Text>
 
-              <Bullets
-                items={[
-                  "Operators had to constantly context-switch between tools",
-                  "Jobs were easy to miss or duplicate",
-                  "There was no single view of what was in a batch or where it was in the process",
-                  "As volume increased, this led to avoidable errors, late batches and a lot of stress for the operations team.",
-                ]}
-              />
+                <Bullets
+                  items={[
+                    "Operators had to memorise exceptions and routing rules",
+                    "Dispatch flows changed depending on which system a job came frome",
+                    "Data was duplicated or inconsistent",
+                    "Training new staff took too long",
+                    "Errors during batching and dispatch were common",
+                  ]}
+                />
+              </div>
+
+              <Text>
+                Teams needed a single, predictable workflow and a modern UI that
+                matched how they actually work.
+              </Text>
             </PortfolioViewSection>
 
             {/* Section Process */}
             <PortfolioViewSection
-              title={project.sections[2]?.title || ""}
+              title="Approach"
               images={project.sections[2]?.images || []}
-              caption={project.sections[2]?.caption || ""}
+              caption="Invoices list with and add credit overlay."
             >
-              {project.sections[2]?.content.map((item, index) => (
-                <Text key={index}>{item}</Text>
-              ))}
+              <Text as="h3" size="text-lg">
+                1. Map real workflows
+              </Text>
+              <Text>
+                I shadowed operators on live jobs and mapped end-to-end journeys
+                from a job entering the system, through batching and printing,
+                to final dispatch. This helped me understand the core actions
+                operators performed dozens of times a day (create batch,
+                add/remove jobs, resolve conflicts, print paperwork) and the
+                common points of friction.
+              </Text>
+
+              <Text as="h3">2. Define a clear system boundary</Text>
+              <div className="space-y-2">
+                <Text>Two apps with distinct responsibilities:</Text>
+                <Bullets
+                  items={[
+                    "Production = operational workflow",
+                    "Print = product, order and commercial logic",
+                  ]}
+                />
+              </div>
+              <Text>This removed the need to jump between systems.</Text>
+
+              <Text as="h3">3. Design high-frequency flows</Text>
+              <div className="space-y-2">
+                <Text>In Figma, I designed:</Text>
+                <Bullets
+                  items={[
+                    "Job selection & filtering",
+                    "Manual batch creation",
+                    "Conflict detection & resolution",
+                    "Dispatch steps",
+                    "SKU creation & editing",
+                    "Order & invoicing screens",
+                  ]}
+                />
+              </div>
+              <Text>
+                The focus was always on speed, clarity and reducing cognitive
+                load.
+              </Text>
+
+              <Text as="h3">4. Build a reusable component system</Text>
+              <Text>
+                I created a shared design system used across both apps: tables,
+                filters, batch cards, forms, status badges, modals. Implemented
+                in React + Storybook.
+              </Text>
+
+              <Text as="h3">5. Front-end implementation</Text>
+              <Text>
+                Built the interfaces in Next.js, TypeScript and Tailwind,
+                collaborating closely with backend engineers to ensure business
+                logic and UI behaviour aligned.
+              </Text>
             </PortfolioViewSection>
 
-            {/* Section Results */}
             <PortfolioViewSection
-              title={project.sections[3]?.title || ""}
+              title="Outcomes"
               images={project.sections[3]?.images || []}
-              caption={project.sections[3]?.caption || ""}
+              caption="Screens from the batch creation and conflict resolution flows, including job selection, batch details and confirmation steps."
             >
-              {project.sections[3]?.content.map((item, index) => (
-                <Text key={index}>{item}</Text>
-              ))}
+              <Bullets
+                items={[
+                  "Reduction in dispatch errors",
+                  "Operators now complete workflows inside one app, not three",
+                  "Faster onboarding and fewer mistakes",
+                  "A unified, modern UI for both production and commercial teams",
+                  "Reusable components accelerate future internal tools",
+                ]}
+              ></Bullets>
+              <Text>
+                This reduced mis-batching and gave operators more confidence
+                during peak cycles.
+              </Text>
             </PortfolioViewSection>
           </div>
 
