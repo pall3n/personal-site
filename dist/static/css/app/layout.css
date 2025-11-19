@@ -661,6 +661,9 @@ video {
 .top-1\/2 {
   top: 50%;
 }
+.isolate {
+  isolation: isolate;
+}
 .row-start-3 {
   grid-row-start: 3;
 }

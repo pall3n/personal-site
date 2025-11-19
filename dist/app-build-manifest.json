@@ -25,6 +25,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/portfolio/print-evolved/page.js"
+    ],
+    "/portfolio/podcast-app/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/portfolio/podcast-app/page.js"
     ]
   }
 }

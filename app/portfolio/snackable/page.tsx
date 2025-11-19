@@ -218,8 +218,8 @@ export default function PortfolioPodcastApp() {
             {/* Section Outcomes */}
             <PortfolioViewSection
               title="Outcomes"
-              images={project.sections[3]?.images || []}
-              caption="Screens from the batch creation and conflict resolution flows, including job selection, batch details and confirmation steps."
+              // images={project.sections[3]?.images || []}
+              caption=""
             >
               <Bullets
                 items={[
@@ -229,12 +229,10 @@ export default function PortfolioPodcastApp() {
                   "A scalable foundation for future development",
                 ]}
               ></Bullets>
-              <Text>
-                This reduced mis-batching and gave operators more confidence
-                during peak cycles.
-              </Text>
             </PortfolioViewSection>
           </div>
+
+          <PortfolioViewFooter />
         </section>
       </main>
 
