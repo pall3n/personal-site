@@ -147,7 +147,7 @@ export default function PortfolioPodcastApp() {
             <PortfolioViewSection
               title="Problem"
               images={project.sections[1]?.images || []}
-              caption="S"
+              caption="Screens showing course creation process."
             >
               <Text>
                 Traditional courses are long, dense and hard to finish. Creators
@@ -170,7 +170,7 @@ export default function PortfolioPodcastApp() {
             <PortfolioViewSection
               title="Approach"
               images={project.sections[2]?.images || []}
-              caption="Ierlay."
+              caption="Screens showing the creator preview flows."
             >
               <Text as="h3" size="text-lg">
                 1. Define the model
@@ -215,6 +215,7 @@ export default function PortfolioPodcastApp() {
               </Text>
             </PortfolioViewSection>
 
+            {/* Section Outcomes */}
             <PortfolioViewSection
               title="Outcomes"
               images={project.sections[3]?.images || []}
