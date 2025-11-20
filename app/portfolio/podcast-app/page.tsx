@@ -222,10 +222,11 @@ export default function PortfolioPodcastApp() {
               ></Bullets>
             </PortfolioViewSection>
           </div>
+
+          <PortfolioViewFooter />
         </section>
       </main>
 
-      <PortfolioViewFooter />
       <Footer />
     </div>
   );
