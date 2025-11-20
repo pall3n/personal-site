@@ -8,8 +8,9 @@ const project = {
   sections: [
     {
       title: "About",
-      content:
+      content: [
         "A responsive progressive web app for internal print operations teams to manage production workflows. I led design and front-end implementation from initial user flows to final shipped UI.",
+      ],
       images: [
         {
           src: "/images/projects/mity/user-profile.png",
@@ -27,8 +28,9 @@ const project = {
     },
     {
       title: "Problem",
-      content:
+      content: [
         "The original workflow was fragmented across spreadsheets and emails, leading to frequent errors and missed deadlines.",
+      ],
       images: [
         {
           src: "/images/projects/mity/feed.png",
@@ -42,8 +44,9 @@ const project = {
     },
     {
       title: "Process",
-      content:
+      content: [
         "I mapped user journeys with the operations team, defined core actions, and prototyped key flows in Figma. I then translated designs into a reusable component library in React and Storybook.",
+      ],
       images: [
         {
           src: "/images/projects/mity/apps.png",

@@ -1,7 +1,0 @@
-{
-  "/portfolio/page": "app/portfolio/page.js",
-  "/(home)/page": "app/(home)/page.js",
-  "/portfolio/podcast-app/page": "app/portfolio/podcast-app/page.js",
-  "/portfolio/snackable/page": "app/portfolio/snackable/page.js",
-  "/portfolio/print-evolved/page": "app/portfolio/print-evolved/page.js"
-}
