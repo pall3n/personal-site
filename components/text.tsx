@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 
 export default function Text({
-  colour = "text-zinc-500 dark:text-zinc-400",
-  size = "text-lg",
+  colour = "text-stone-500 dark:text-stone-400",
+  size = "text-lg-",
   weight,
   className,
   as,
@@ -25,11 +25,21 @@ export default function Text({
     as === "h5" ||
     as === "h6";
 
-  const fontWeight = isHeading && !weight ? `font-bold` : weight;
-  const fontColour = isHeading ? `text-zinc-800 dark:text-zinc-50` : colour;
+  // if h1 bold, h2 semibold, h3 normal, h4 normal, h5 normal, h6 normal
+  if (as === "h1") {
+    weight = "font-bold";
+  } else if (as === "h2" || as === "h3") {
+    weight = "font-semibold";
+  }
+  // const fontWeight = isHeading && !weight ? `font-bold` : weight;
+  const fontWeight = weight;
+  const fontColour = isHeading ? `text-stone-800 dark:text-stone-50` : colour;
+  const textLineHeight = isHeading ? `` : `leading-relaxed`;
 
   return (
-    <Component className={cn(size, fontWeight, fontColour, className)}>
+    <Component
+      className={cn(size, fontWeight, fontColour, textLineHeight, className)}
+    >
       {children}
     </Component>
   );

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-4 sm:py-6 px-8 mt-6 md:mt-12 border-t border-zinc-200 dark:border-zinc-800">
-      <div className="text-sm text-zinc-500 dark:text-zinc-400">
+    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-4 sm:py-6 px-8 mt-6 md:mt-12 border-t border-stone-200 dark:border-stone-800">
+      <div className="text-sm text-stone-500 dark:text-stone-400">
         Copyright © {new Date().getFullYear()} Patrick Allen. All rights
         reserved.
       </div>

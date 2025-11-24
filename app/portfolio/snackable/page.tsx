@@ -10,24 +10,24 @@ const project = {
   subtitle: "A platform for creating and managing snackable content. ",
   snapshot: [
     {
-      label: "Role:",
-      copy: "Product Designer (UX, UI, Product Exploration)",
-    },
-    {
-      label: "Company:",
+      label: "Company",
       copy: "Decode",
     },
     {
-      label: "Timeline:",
+      label: "Timeline",
       copy: "2023",
     },
     {
-      label: "Delivery:",
+      label: "Role",
+      copy: "Product Designer (UX, UI, Product Exploration)",
+    },
+    {
+      label: "Delivery",
       copy: "Figma prototype (no dev)",
     },
     {
-      label: "Scope:",
-      copy: "Onboarding, course creation, course management, learner flow, quiz creation, markup editor",
+      label: "Scope",
+      copy: "Onboarding, course management, markup editor, learner flow",
     },
   ],
 
@@ -113,7 +113,7 @@ const project = {
 
 export default function PortfolioPodcastApp() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-zinc-900">
+    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         <section className="py-8 px-8">
           <PortfolioViewHeader
@@ -155,7 +155,7 @@ export default function PortfolioPodcastApp() {
                 content early.
               </Text>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>Snackable needed:</Text>
                 <Bullets
                   items={[
@@ -182,7 +182,7 @@ export default function PortfolioPodcastApp() {
               </Text>
 
               <Text as="h3">2. Design creator workflows</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>I explored flows for:</Text>
                 <Bullets
                   items={[

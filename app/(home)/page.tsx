@@ -48,7 +48,7 @@ const pricing = [
 
 export default function Home() {
   return (
-    <div className="bg-white dark:bg-zinc-900">
+    <div className="bg-white dark:bg-stone-900">
       <main>
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
           <div className="flex flex-col">
@@ -59,10 +59,10 @@ export default function Home() {
               height={84}
               className="rounded-full"
             />
-            <h1 className="text-2xl font-bold text-zinc-800 dark:text-zinc-50 mt-4">
+            <h1 className="text-3xl font-bold text-stone-800 dark:text-stone-50 mt-4">
               Patrick Allen
             </h1>
-            <div className="lg:text-lg text-zinc-500 dark:text-zinc-400">
+            <div className="lg:text-lg text-stone-500 dark:text-stone-400">
               Senior Frontend Developer and UI Designer.
             </div>
           </div>
@@ -71,9 +71,9 @@ export default function Home() {
             {about.map((item, index) => (
               <div
                 key={index}
-                className=" lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400"
+                className=" lg:text-lg- lg:leading-snug- text-stone-500 dark:text-stone-400"
               >
-                <span className="text-zinc-800 dark:text-zinc-50 font-medium">
+                <span className="text-stone-800 dark:text-stone-50 font-medium">
                   {item.headline}&nbsp;
                 </span>
                 {item.body}
@@ -95,21 +95,21 @@ export default function Home() {
         </section>
 
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
-          <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-50">
+          <h2 className="text-2xl font-bold text-stone-800 dark:text-stone-50">
             Pricing
           </h2>
 
           <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
             {pricing.map((item, index) => (
               <div key={index}>
-                <div className=" lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400">
-                  <span className="text-zinc-800 dark:text-zinc-50 font-medium">
+                <div className=" lg:text-lg- lg:leading-snug- text-stone-500 dark:text-stone-400">
+                  <span className="text-stone-800 dark:text-stone-50 font-medium">
                     {item.headline}&nbsp;
                   </span>
                   {item.body}
                 </div>
 
-                <div className="text-zinc-800 dark:text-zinc-50 font-medium mt-2">
+                <div className="text-stone-800 dark:text-stone-50 font-medium mt-2">
                   {item.price}
                 </div>
               </div>

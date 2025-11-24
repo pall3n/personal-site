@@ -12,23 +12,23 @@ const project = {
 
   snapshot: [
     {
-      label: "Role:",
-      copy: "Product Designer & Front-End Engineer",
-    },
-    {
-      label: "Company:",
+      label: "Company",
       copy: "Print Evolved (B2B print and fulfilment)",
     },
     {
-      label: "Timeline:",
+      label: "Timeline",
       copy: "2024 – ongoing",
     },
     {
-      label: "Team:",
-      copy: "Designer & frontend engineer (me), backend engineer, operations manager",
+      label: "Role",
+      copy: "Product Designer & Front-End Engineer",
     },
     {
-      label: "My contribution:",
+      label: "Team",
+      copy: "Me + backend engineer & operations manager",
+    },
+    {
+      label: "My contribution",
       copy: "UX, UI, design system, front-end implementation",
     },
   ],
@@ -130,7 +130,7 @@ const project = {
 
 export default function PortfolioPrint() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-zinc-900">
+    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         {/* <PortfolioView project={project} /> */}
         <section className="py-8 px-8">
@@ -155,7 +155,7 @@ export default function PortfolioPrint() {
                 batching/dispatch errors.
               </Text>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>
                   I redesigned and rebuilt the internal platform as two modern,
                   responsive apps with clear responsibilities:
@@ -181,7 +181,7 @@ export default function PortfolioPrint() {
               images={project.sections[1]?.images || []}
               caption="Screens from the orders list with and batch invoice creation."
             >
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>
                   Legacy systems had grown fragmented over time. Different parts
                   of the workflow lived in different tools, meaning:
@@ -210,9 +210,7 @@ export default function PortfolioPrint() {
               images={project.sections[2]?.images || []}
               caption="Invoices list with and add credit overlay."
             >
-              <Text as="h3" size="text-lg">
-                1. Map real workflows
-              </Text>
+              <Text as="h3">1. Map real workflows</Text>
               <Text>
                 I shadowed operators on live jobs and mapped end-to-end journeys
                 from a job entering the system, through batching and printing,
@@ -223,7 +221,7 @@ export default function PortfolioPrint() {
               </Text>
 
               <Text as="h3">2. Define a clear system boundary</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>Two apps with distinct responsibilities:</Text>
                 <Bullets
                   items={[
@@ -235,7 +233,7 @@ export default function PortfolioPrint() {
               <Text>This removed the need to jump between systems.</Text>
 
               <Text as="h3">3. Design high-frequency flows</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>In Figma, I designed:</Text>
                 <Bullets
                   items={[

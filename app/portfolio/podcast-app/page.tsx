@@ -10,19 +10,19 @@ const project = {
   subtitle: "Bringing social layers to podcasts. ",
   snapshot: [
     {
-      label: "Role:",
-      copy: "Product Designer & Front-End Developer",
-    },
-    {
-      label: "Timeline:",
+      label: "Timeline",
       copy: "2023",
     },
     {
-      label: "Delivery:",
+      label: "Role",
+      copy: "Product Designer & Front-End Developer",
+    },
+    {
+      label: "Delivery",
       copy: "UX, UI, Prototyping + React Native implementation",
     },
     {
-      label: "Scope:",
+      label: "Scope",
       copy: "Podcast player, discovery feed, social features (likes, comments, clips, AMAs), queues, community interactions",
     },
   ],
@@ -57,7 +57,7 @@ const project = {
 
 export default function PortfolioPodcastApp() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-zinc-900">
+    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         <section className="py-8 px-8">
           <PortfolioViewHeader
@@ -100,7 +100,7 @@ export default function PortfolioPodcastApp() {
                 apps isolate listening from social interaction.
               </Text>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>The product aimed to solve this by:</Text>
                 <Bullets
                   items={[
@@ -122,7 +122,7 @@ export default function PortfolioPodcastApp() {
               <Text as="h3" size="text-lg">
                 1. Define the structure
               </Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>We shaped the product around three pillars:</Text>
                 <Bullets
                   items={[
@@ -138,7 +138,7 @@ export default function PortfolioPodcastApp() {
               </Text>
 
               <Text as="h3">2. Design the core listening experience</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>I designed flows for:</Text>
                 <Bullets
                   items={[
@@ -155,7 +155,7 @@ export default function PortfolioPodcastApp() {
               </Text>
 
               <Text as="h3">3. Add the community layer</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>To bring listeners together, I designed:</Text>
                 <Bullets
                   items={[
@@ -169,7 +169,7 @@ export default function PortfolioPodcastApp() {
               </div>
 
               <Text as="h3">4. Build a dynamic discovery feed</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>
                   The Discovery tab used episode metadata or auto-generated
                   previews to create:
@@ -185,7 +185,7 @@ export default function PortfolioPodcastApp() {
               </div>
 
               <Text as="h3">5. Prototype the full app</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>
                   I created a high-fidelity Figma prototype and a functional
                   React Native front-end to test:

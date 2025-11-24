@@ -18,7 +18,7 @@ export default function PortfolioViewSection({
 
       <div className="max-w-screen-sm mx-auto px-6">
         {title && (
-          <Text as="h2" className="text-xl">
+          <Text as="h2" className="text-sm uppercase font-semibold">
             {title}
           </Text>
         )}

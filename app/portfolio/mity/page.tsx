@@ -10,23 +10,19 @@ const project = {
   subtitle: "Communities built on decentralised rails.",
   snapshot: [
     {
-      label: "Role:",
-      copy: "Product Designer & Full Stack Developer",
-    },
-    {
-      label: "Timeline:",
+      label: "Timeline",
       copy: "2022-2023 (Personal Project)",
     },
     {
-      label: "Tech:",
-      copy: "Nuxt.js (Vue), PWA, DeSo blockchain",
+      label: "Role",
+      copy: "Product Designer & Full Stack Developer",
     },
     {
-      label: "Scope:",
+      label: "Scope",
       copy: "UX, UI, product strategy, architecture, end-to-end MVP",
     },
     {
-      label: "Features:",
+      label: "Features",
       copy: "Communities, feeds, posting, reactions, creator coin purchase, wallet flows, profiles, App Store concept",
     },
   ],
@@ -81,7 +77,7 @@ const project = {
 
 export default function PortfolioPodcastApp() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-zinc-900">
+    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         <section className="py-8 px-8">
           <PortfolioViewHeader
@@ -128,7 +124,7 @@ export default function PortfolioPodcastApp() {
                 success, and developers can’t easily extend the platform.
               </Text>
 
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>Mity aimed to solve this by:</Text>
                 <Bullets
                   items={[
@@ -150,7 +146,7 @@ export default function PortfolioPodcastApp() {
               <Text as="h3" size="text-lg">
                 1. Define the core experience
               </Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>The platform was structured around:</Text>
                 <Bullets
                   items={[
@@ -165,7 +161,7 @@ export default function PortfolioPodcastApp() {
               </div>
 
               <Text as="h3">2. Build creator-friendly economic flows</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>I designed simple, frictionless interactions for:</Text>
                 <Bullets
                   items={[
@@ -193,7 +189,7 @@ export default function PortfolioPodcastApp() {
               </Text>
 
               <Text as="h3">4. Build the v1 MVP</Text>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <Text>
                   I implemented a working MVP using Nuxt.js (Vue) as a
                   progressive web app (PWA), integrating:

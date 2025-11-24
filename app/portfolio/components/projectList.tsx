@@ -25,7 +25,7 @@ export default function ProjectList() {
     //  <section className="py-16 px-8 max-w-screen-sm mx-auto">
     <div>
       <div className="flex flex-col">
-        <h1 className="text-2xl font-bold text-zinc-800 dark:text-zinc-50 mt-4">
+        <h1 className="text-2xl font-bold text-stone-800 dark:text-stone-50 mt-4">
           Portfolio
         </h1>
       </div>
@@ -35,13 +35,13 @@ export default function ProjectList() {
           <Link
             href={item.href}
             key={index}
-            className="group flex items-center justify-between lg:text-lg lg:leading-snug text-zinc-500 dark:text-zinc-400"
+            className="group flex items-center justify-between lg:text-lg lg:leading-snug text-stone-500 dark:text-stone-400"
           >
             <div className="flex gap-1.5">
-              <span className="text-zinc-300 dark:text-zinc-200 font-semibold">
+              <span className="text-stone-300 dark:text-stone-200 font-semibold">
                 0{index + 1}.
               </span>
-              <span className="text-zinc-800 dark:text-zinc-50 font-medium">
+              <span className="text-stone-800 dark:text-stone-50 font-medium">
                 {item.label}
               </span>
             </div>
