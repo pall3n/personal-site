@@ -17,7 +17,7 @@ export default function CarouselComponent({
   return (
     <div>
       {images && images.length > 1 ? (
-        <div className="w-full max-w-screen-lg mx-auto">
+        <div className="w-full max-w-screen-xl px-8 lg:px-12 mx-auto">
           <Carousel opts={{ loop: true }}>
             <CarouselContent>
               {images.map((image, index) => (

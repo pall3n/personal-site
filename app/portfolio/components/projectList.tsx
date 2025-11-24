@@ -93,7 +93,7 @@ const ProjectItem = ({
       <img
         src={item.image}
         alt={item.label}
-        className="w-full h-auto rounded-xl"
+        className="w-full h-auto rounded-xl ring-0 group-hover:ring-4 ring-offset-2 ring-stone-100 transition-all duration-300"
       />
 
       <div className="flex items-center justify-between gap-1 px-2 py-3">
