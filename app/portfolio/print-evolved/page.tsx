@@ -83,19 +83,19 @@ const project = {
     {
       images: [
         {
-          src: "/images/projects/print-evolved/invoice/invoices-1.png",
+          src: "/images/projects/print-evolved/invoice/invoices-01.png",
           alt: "Invoices list",
         },
         {
-          src: "/images/projects/print-evolved/invoice/invoices-2.png",
+          src: "/images/projects/print-evolved/invoice/invoices-02.png",
           alt: "Add credit overlay",
         },
         {
-          src: "/images/projects/print-evolved/invoice/invoices-3.png",
+          src: "/images/projects/print-evolved/invoice/invoices-03.png",
           alt: "Send invoice popover",
         },
         {
-          src: "/images/projects/print-evolved/invoice/invoices-4.png",
+          src: "/images/projects/print-evolved/invoice/invoices-04.png",
           alt: "Paid invoice",
         },
       ],
