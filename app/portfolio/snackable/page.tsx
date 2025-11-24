@@ -95,7 +95,7 @@ const project = {
     {
       images: [
         {
-          src: "/images/projects/snackable/preview.png",
+          src: "/images/projects/snackable/preview-course.png",
           alt: "Preview screen",
         },
         {

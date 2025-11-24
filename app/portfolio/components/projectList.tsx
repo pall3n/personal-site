@@ -1,22 +1,28 @@
 import Link from "next/link";
+import Text from "@/components/text";
 import { ArrowRightIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const work = [
   {
     label: "Print Evolved",
     href: "/portfolio/print-evolved",
+    image: "/images/projects/print-evolved/preview.png",
   },
   {
     label: "Snackable",
     href: "/portfolio/snackable",
+    image: "/images/projects/snackable/preview.png",
   },
   {
     label: "Podcast App",
     href: "/portfolio/podcast-app",
+    image: "/images/projects/podcast/preview.png",
   },
   {
     label: "Mity V2",
     href: "/portfolio/mity",
+    image: "/images/projects/mity/preview.png",
   },
 ];
 
@@ -25,28 +31,36 @@ export default function ProjectList() {
     //  <section className="py-16 px-8 max-w-screen-sm mx-auto">
     <div>
       <div className="flex flex-col">
-        <h1 className="text-2xl font-bold text-stone-800 dark:text-stone-50 mt-4">
+        <Text as="h2" size="text-xl">
           Portfolio
-        </h1>
+        </Text>
       </div>
 
-      <div className="flex flex-col gap-4 mt-6">
+      <div className="grid grid-cols-2 gap-4 lg:gap-6 mt-8">
         {work.map((item, index) => (
           <Link
             href={item.href}
             key={index}
-            className="group flex items-center justify-between lg:text-lg lg:leading-snug text-stone-500 dark:text-stone-400"
+            className={cn(
+              "group transition-all duration-100 text-stone-500 dark:text-stone-400",
+              index === 0 ? "col-span-2" : ""
+            )}
           >
-            <div className="flex gap-1.5">
-              <span className="text-stone-300 dark:text-stone-200 font-semibold">
-                0{index + 1}.
-              </span>
-              <span className="text-stone-800 dark:text-stone-50 font-medium">
-                {item.label}
-              </span>
-            </div>
+            <img
+              src={item.image}
+              alt={item.label}
+              className="w-full h-auto rounded-xl"
+            />
 
-            <ArrowRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+            <div className="flex items-center justify-between gap-1 px-2 py-3">
+              <div className="flex gap-1.5">
+                <span className="text-stone-800 dark:text-stone-50 font-medium">
+                  {item.label}
+                </span>
+              </div>
+
+              <ArrowRightIcon className="w-4 h-4 opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all duration-300" />
+            </div>
           </Link>
         ))}
       </div>
