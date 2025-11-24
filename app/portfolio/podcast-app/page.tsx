@@ -223,7 +223,7 @@ export default function PortfolioPodcastApp() {
             </PortfolioViewSection>
           </div>
 
-          <PortfolioViewFooter />
+          <PortfolioViewFooter hideProjectIndex={2} inline={true} />
         </section>
       </main>
 

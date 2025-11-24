@@ -6,7 +6,7 @@ export default function Portfolio() {
     <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
-          <ProjectList />
+          <ProjectList showHeader={true} />
         </section>
       </main>
 

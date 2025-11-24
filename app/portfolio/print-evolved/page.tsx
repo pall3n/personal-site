@@ -287,7 +287,7 @@ export default function PortfolioPrint() {
             </PortfolioViewSection>
           </div>
 
-          <PortfolioViewFooter />
+          <PortfolioViewFooter hideProjectIndex={0} inline={true} />
         </section>
       </main>
 
