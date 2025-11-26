@@ -26,7 +26,7 @@ export default function Portfolio() {
 
           <div className="mt-8 space-y-4">
             <Text as="p">
-              I’m a design engineer with a focus on clear thinking, strong
+              I’m a design engineer with a focus on contextual design, strong
               visual systems and shipping real products. I work end-to-end:
               research, UX architecture, UI design, prototyping, and front-end
               implementation in React, TypeScript and modern CSS.

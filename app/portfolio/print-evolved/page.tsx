@@ -158,19 +158,20 @@ export default function PortfolioPrint() {
                 batching/dispatch errors.
               </Text>
 
-              <div className="space-y-3">
-                <Text>
-                  I redesigned and rebuilt the internal platform as two modern,
-                  responsive apps with clear responsibilities:
-                </Text>
+              {/* <div className="space-y-3"> */}
+              <Text>
+                I redesigned and rebuilt the internal platform as three modern,
+                responsive apps with clear responsibilities:
+              </Text>
 
-                <Bullets
-                  items={[
-                    "Production → batching, conflict handling, printing, packing, dispatch",
-                    "Print → SKU creation, order management, customer rules, invoicing",
-                  ]}
-                />
-              </div>
+              <Bullets
+                items={[
+                  "Production → batching, conflict handling, printing, packing, dispatch",
+                  "Print → SKU creation, order management, customer rules, invoicing",
+                  "Admin → user management, role based access, shared configuration",
+                ]}
+              />
+              {/* </div> */}
 
               <Text>
                 My role covered end-to-end UX, UI, prototyping, design systems
@@ -184,22 +185,22 @@ export default function PortfolioPrint() {
               imageGrid={project.sections[1]?.images || []}
               caption="Screens from the orders list with and batch invoice creation."
             >
-              <div className="space-y-3">
-                <Text>
-                  Legacy systems had grown fragmented over time. Different parts
-                  of the workflow lived in different tools, meaning:
-                </Text>
+              {/* <div className="space-y-3"> */}
+              <Text>
+                Legacy systems had grown fragmented over time. Different parts
+                of the workflow lived in different tools, meaning:
+              </Text>
 
-                <Bullets
-                  items={[
-                    "Operators had to memorise exceptions and routing rules",
-                    "Dispatch flows changed depending on which system a job came frome",
-                    "Data was duplicated or inconsistent",
-                    "Training new staff took too long",
-                    "Errors during batching and dispatch were common",
-                  ]}
-                />
-              </div>
+              <Bullets
+                items={[
+                  "Operators had to memorise exceptions and routing rules",
+                  "Dispatch flows changed depending on which system a job came from",
+                  "Data was duplicated or inconsistent",
+                  "Training new staff took too long",
+                  "Errors during batching and dispatch were common",
+                ]}
+              />
+              {/* </div> */}
 
               <Text>
                 Teams needed a single, predictable workflow and a modern UI that
@@ -224,31 +225,28 @@ export default function PortfolioPrint() {
               </Text>
 
               <Text as="h3">2. Define a clear system boundary</Text>
-              <div className="space-y-3">
-                <Text>Two apps with distinct responsibilities:</Text>
-                <Bullets
-                  items={[
-                    "Production = operational workflow",
-                    "Print = product, order and commercial logic",
-                  ]}
-                />
-              </div>
+              <Text>Three apps with distinct responsibilities:</Text>
+              <Bullets
+                items={[
+                  "Production = operational workflow",
+                  "Print = product, order and commercial logic",
+                  "Admin = user management, role based access, shared configuration",
+                ]}
+              />
               <Text>This removed the need to jump between systems.</Text>
 
               <Text as="h3">3. Design high-frequency flows</Text>
-              <div className="space-y-3">
-                <Text>In Figma, I designed:</Text>
-                <Bullets
-                  items={[
-                    "Job selection & filtering",
-                    "Manual batch creation",
-                    "Conflict detection & resolution",
-                    "Dispatch steps",
-                    "SKU creation & editing",
-                    "Order & invoicing screens",
-                  ]}
-                />
-              </div>
+              <Text>In Figma, I designed:</Text>
+              <Bullets
+                items={[
+                  "Job selection & filtering",
+                  "Manual batch creation",
+                  "Conflict detection & resolution",
+                  "Dispatch steps",
+                  "SKU creation & editing",
+                  "Order & invoicing screens",
+                ]}
+              />
               <Text>
                 The focus was always on speed, clarity and reducing cognitive
                 load.

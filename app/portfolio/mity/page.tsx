@@ -152,32 +152,29 @@ export default function PortfolioPodcastApp() {
               <Text as="h3" size="text-lg">
                 1. Define the core experience
               </Text>
-              <div className="space-y-3">
-                <Text>The platform was structured around:</Text>
-                <Bullets
-                  items={[
-                    "Communities — joinable spaces with posts, discussions and shared ownership",
-                    "Feeds — personalised timelines mixing posts, reactions and community updates",
-                    "Profiles — creator identities with social and economic data",
-                    "Digital money — tipping, tokenised support and reward mechanisms",
-                    "Follow Post — a feature to track specific conversations you care about",
-                    "Invites — frictionless ways to onboard new members",
-                  ]}
-                />
-              </div>
+
+              <Text>The platform was structured around:</Text>
+              <Bullets
+                items={[
+                  "Communities — joinable spaces with posts, discussions and shared ownership",
+                  "Feeds — personalised timelines mixing posts, reactions and community updates",
+                  "Profiles — creator identities with social and economic data",
+                  "Digital money — tipping, tokenised support and reward mechanisms",
+                  "Follow Post — a feature to track specific conversations you care about",
+                  "Invites — frictionless ways to onboard new members",
+                ]}
+              />
 
               <Text as="h3">2. Build creator-friendly economic flows</Text>
-              <div className="space-y-3">
-                <Text>I designed simple, frictionless interactions for:</Text>
-                <Bullets
-                  items={[
-                    "purchasing creator coins",
-                    "tipping and micro-support",
-                    "viewing social/economic reputation",
-                    "connecting wallets without overwhelming users",
-                  ]}
-                />
-              </div>
+              <Text>I designed simple, frictionless interactions for:</Text>
+              <Bullets
+                items={[
+                  "purchasing creator coins",
+                  "tipping and micro-support",
+                  "viewing social/economic reputation",
+                  "connecting wallets without overwhelming users",
+                ]}
+              />
               <Text>
                 The focus was on making crypto feel invisible — powerful but
                 approachable.

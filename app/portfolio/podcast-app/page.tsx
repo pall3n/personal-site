@@ -105,17 +105,15 @@ export default function PortfolioPodcastApp() {
                 apps isolate listening from social interaction.
               </Text>
 
-              <div className="space-y-3">
-                <Text>The product aimed to solve this by:</Text>
-                <Bullets
-                  items={[
-                    "adding community features directly into the listening experience",
-                    "making discovery active and dynamic, powered by social signals",
-                    "giving creators a place to interact with their audience",
-                    "letting listeners explore podcasts through generated previews",
-                  ]}
-                />
-              </div>
+              <Text>The product aimed to solve this by:</Text>
+              <Bullets
+                items={[
+                  "adding community features directly into the listening experience",
+                  "making discovery active and dynamic, powered by social signals",
+                  "giving creators a place to interact with their audience",
+                  "letting listeners explore podcasts through generated previews",
+                ]}
+              />
             </PortfolioViewSection>
 
             {/* Section Approach */}
@@ -127,84 +125,74 @@ export default function PortfolioPodcastApp() {
               <Text as="h3" size="text-lg">
                 1. Define the structure
               </Text>
-              <div className="space-y-3">
-                <Text>We shaped the product around three pillars:</Text>
-                <Bullets
-                  items={[
-                    "Listen — follow shows, play episodes, build a queue",
-                    "Engage - like, comment, vote, ask questions, join AMAs",
-                    "Discover — scroll through a feed of episode previews generated from transcripts or metadata",
-                  ]}
-                />
-              </div>
+              <Text>We shaped the product around three pillars:</Text>
+              <Bullets
+                items={[
+                  "Listen — follow shows, play episodes, build a queue",
+                  "Engage - like, comment, vote, ask questions, join AMAs",
+                  "Discover — scroll through a feed of episode previews generated from transcripts or metadata",
+                ]}
+              />
               <Text>
                 These pillars guided the app’s navigation, interaction model and
                 UI.
               </Text>
 
               <Text as="h3">2. Design the core listening experience</Text>
-              <div className="space-y-3">
-                <Text>I designed flows for:</Text>
-                <Bullets
-                  items={[
-                    "following shows and creators",
-                    "playing episodes",
-                    "queue management",
-                    "lightweight interactions (likes, clips, shares) in the player",
-                    "episode detail screens with discussion threads",
-                  ]}
-                />
-              </div>
+              <Text>I designed flows for:</Text>
+              <Bullets
+                items={[
+                  "following shows and creators",
+                  "playing episodes",
+                  "queue management",
+                  "lightweight interactions (likes, clips, shares) in the player",
+                  "episode detail screens with discussion threads",
+                ]}
+              />
               <Text>
                 The player UI was built around clarity and quick actions.
               </Text>
 
               <Text as="h3">3. Add the community layer</Text>
-              <div className="space-y-3">
-                <Text>To bring listeners together, I designed:</Text>
-                <Bullets
-                  items={[
-                    "episode-level comment threads",
-                    "simple upvotes and reactions",
-                    "AMA boards where creators could answer listener questions",
-                    "quick clip creation (highlight → clip) for sharing moments",
-                    "basic user profiles",
-                  ]}
-                />
-              </div>
+              <Text>To bring listeners together, I designed:</Text>
+              <Bullets
+                items={[
+                  "episode-level comment threads",
+                  "simple upvotes and reactions",
+                  "AMA boards where creators could answer listener questions",
+                  "quick clip creation (highlight → clip) for sharing moments",
+                  "basic user profiles",
+                ]}
+              />
 
               <Text as="h3">4. Build a dynamic discovery feed</Text>
-              <div className="space-y-3">
-                <Text>
-                  The Discovery tab used episode metadata or auto-generated
-                  previews to create:
-                </Text>
-                <Bullets
-                  items={[
-                    "short audio snippets",
-                    "teaser cards",
-                    "simple episode summaries",
-                    "quick “add to queue” actions",
-                  ]}
-                />
-              </div>
+              <Text>
+                The Discovery tab used episode metadata or auto-generated
+                previews to create:
+              </Text>
+              <Bullets
+                items={[
+                  "short audio snippets",
+                  "teaser cards",
+                  "simple episode summaries",
+                  "quick “add to queue” actions",
+                ]}
+              />
 
               <Text as="h3">5. Prototype the full app</Text>
-              <div className="space-y-3">
-                <Text>
-                  I created a high-fidelity Figma prototype and a functional
-                  React Native front-end to test:
-                </Text>
-                <Bullets
-                  items={[
-                    "onboarding",
-                    "feed behaviour",
-                    "player interactions",
-                    "comment flows",
-                    "queue management",
-                  ]}
-                />
-              </div>
+              <Text>
+                I created a high-fidelity Figma prototype and a functional React
+                Native front-end to test:
+              </Text>
+              <Bullets
+                items={[
+                  "onboarding",
+                  "feed behaviour",
+                  "player interactions",
+                  "comment flows",
+                  "queue management",
+                ]}
+              />
               <Text>
                 This allowed for early testing of engagement ideas and feed
                 behaviour.

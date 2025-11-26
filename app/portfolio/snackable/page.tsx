@@ -135,10 +135,11 @@ export default function PortfolioPodcastApp() {
               caption="Screens showing the onboarding process."
             >
               <Text>
-                Snackable is an MVP concept for a platform that helps creators
-                build and publish bite-sized courses designed to be completed
-                quickly. The goal: reduce overwhelm, increase completion rates
-                and help learners build momentum through small, repeatable wins.
+                I was hired to design the MVP of Snackable, a platform that
+                helps creators build and publish bite-sized courses designed to
+                be completed quickly. The goal: reduce overwhelm, increase
+                completion rates and help learners build momentum through small,
+                repeatable wins.
               </Text>
 
               <Text>
@@ -187,18 +188,16 @@ export default function PortfolioPodcastApp() {
               </Text>
 
               <Text as="h3">2. Design creator workflows</Text>
-              <div className="space-y-3">
-                <Text>I explored flows for:</Text>
-                <Bullets
-                  items={[
-                    "creating courses",
-                    "adding and reordering nuggets",
-                    "writing content using a markup-based editor",
-                    "inserting sections and quizzes",
-                    "previewing the learner view",
-                  ]}
-                />
-              </div>
+              <Text>I explored flows for:</Text>
+              <Bullets
+                items={[
+                  "creating courses",
+                  "adding and reordering nuggets",
+                  "writing content using a markup-based editor",
+                  "inserting sections and quizzes",
+                  "previewing the learner view",
+                ]}
+              />
               <Text>
                 The markup editor kept creation fast, structured and portable.
                 Users can use the Snackable editor or bring in courses created
@@ -208,8 +207,7 @@ export default function PortfolioPodcastApp() {
               <Text as="h3">3. Map the learner experience</Text>
               <Text>
                 I designed a minimal, focused reading and quiz flow with clear
-                progress indicators and momentum cues (“Continue →”) to
-                encourage quick wins.
+                progress indicators and momentum cues to encourage quick wins.
               </Text>
 
               <Text as="h3">4. Prototype the full MVP</Text>
