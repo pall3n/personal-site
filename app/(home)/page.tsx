@@ -62,7 +62,7 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-stone-800 dark:text-stone-50 mt-4">
               Patrick Allen
             </h1>
-            <div className="lg:text-lg text-stone-500 dark:text-stone-400">
+            <div className="lg:text-xl mt-1 text-stone-500 dark:text-stone-400">
               Senior Frontend Developer and UI Designer.
             </div>
           </div>

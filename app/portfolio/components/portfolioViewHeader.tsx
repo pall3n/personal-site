@@ -4,10 +4,12 @@ import Text from "@/components/text";
 
 export default function PortfolioViewHeader({
   title,
+  image,
   subtitle,
   snapshot,
 }: {
   title: string;
+  image?: string;
   subtitle: string;
   snapshot?: {
     label: string;
@@ -29,7 +31,17 @@ export default function PortfolioViewHeader({
         </div>
       </div>
 
-      <div className="max-w-screen-sm px-6 mx-auto mt-14 space-y-2">
+      <div className="max-w-screen-sm px-6 mx-auto mt-16 space-y-1">
+        {/* {image && (
+          <div className="rounded-2xl h-32 overflow-hidden mb-8">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        )} */}
+
         <Text as="h1" size="text-3xl">
           {title}
         </Text>
@@ -39,7 +51,7 @@ export default function PortfolioViewHeader({
       </div>
 
       {snapshot && (
-        <div className="max-w-screen-sm px-6 mx-auto mt-8 lg:mt-12 border-y border-dashed border-stone-100 dark:border-stone-800">
+        <div className="max-w-screen-sm px-6 mx-auto mt-8 lg:mt-10 border-y border-dashed border-stone-100 dark:border-stone-800">
           <div className="flex flex-col gap-2- divide-y divide-dashed divide-stone-100 dark:divide-stone-800">
             {snapshot.map((item, index) => (
               <div

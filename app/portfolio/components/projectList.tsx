@@ -40,8 +40,8 @@ export default function ProjectList({
     <div>
       {showHeader && (
         <div className="flex flex-col">
-          <Text as="h2" size="text-xl">
-            Portfolio
+          <Text as="h2" className="text-sm uppercase font-semibold">
+            Selected Projects
           </Text>
         </div>
       )}
@@ -86,8 +86,8 @@ const ProjectItem = ({
       href={item.href}
       key={index}
       className={cn(
-        "group transition-all duration-100 text-stone-500 dark:text-stone-400",
-        index === 0 && !inline ? "col-span-2" : ""
+        "group transition-all duration-100 text-stone-500 dark:text-stone-400"
+        // index === 0 && !inline ? "col-span-2" : ""
       )}
     >
       <img

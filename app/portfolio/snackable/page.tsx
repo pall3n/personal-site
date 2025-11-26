@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 const project = {
   title: "Snackable MVP",
   subtitle: "A platform for creating and managing snackable content. ",
+  image: "/images/projects/snackable/preview.png",
   snapshot: [
     {
       label: "Company",
@@ -77,6 +78,7 @@ const project = {
         {
           src: "/images/projects/snackable/editor-split.png",
           alt: "Split the snackable",
+          className: "col-span-2",
         },
         {
           src: "/images/projects/snackable/editor-code.png",
@@ -89,6 +91,7 @@ const project = {
         {
           src: "/images/projects/snackable/editor-published.png",
           alt: "Published snackable",
+          className: "col-span-2",
         },
       ],
     },
@@ -105,6 +108,7 @@ const project = {
         {
           src: "/images/projects/snackable/preview-end-screen.png",
           alt: "End screen",
+          className: "col-span-2",
         },
       ],
     },
@@ -120,6 +124,7 @@ export default function PortfolioPodcastApp() {
             title={project.title}
             subtitle={project.subtitle}
             snapshot={project.snapshot}
+            image={project.image}
           />
 
           <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
@@ -146,7 +151,7 @@ export default function PortfolioPodcastApp() {
             {/* Section Problem */}
             <PortfolioViewSection
               title="Problem"
-              images={project.sections[1]?.images || []}
+              imageGrid={project.sections[1]?.images || []}
               caption="Screens showing course creation process."
             >
               <Text>
@@ -169,7 +174,7 @@ export default function PortfolioPodcastApp() {
             {/* Section Approach */}
             <PortfolioViewSection
               title="Approach"
-              images={project.sections[2]?.images || []}
+              imageGrid={project.sections[2]?.images || []}
               caption="Screens showing the creator preview flows."
             >
               <Text as="h3" size="text-lg">

@@ -8,6 +8,7 @@ import Footer from "@/components/footer";
 const project = {
   title: "Mity V2",
   subtitle: "Communities built on decentralised rails.",
+  image: "/images/projects/mity/preview.png",
   snapshot: [
     {
       label: "Timeline",
@@ -33,6 +34,7 @@ const project = {
         {
           src: "/images/projects/mity/user-profile.png",
           alt: "User profile screen",
+          className: "col-span-2",
         },
         {
           src: "/images/projects/mity/user-profile-invite.png",
@@ -47,7 +49,7 @@ const project = {
     {
       images: [
         {
-          src: "/images/projects/mity/feed.png",
+          src: "/images/projects/mity/feed-comment.png",
           alt: "Feed screen",
         },
         {
@@ -61,14 +63,17 @@ const project = {
         {
           src: "/images/projects/mity/apps.png",
           alt: "App store page",
+          className: "col-span-2 rounded-xl",
         },
         {
           src: "/images/projects/mity/post-follow.png",
           alt: "Follow post example",
+          className: "rounded-xl",
         },
         {
           src: "/images/projects/mity/post-unlockable.png",
           alt: "Unlockable post example",
+          className: "rounded-xl",
         },
       ],
     },
@@ -84,13 +89,14 @@ export default function PortfolioPodcastApp() {
             title={project.title}
             subtitle={project.subtitle}
             snapshot={project.snapshot}
+            image={project.image}
           />
 
           <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
             {/* Section Overview */}
             <PortfolioViewSection
               title="Overview"
-              images={project.sections[0]?.images || []}
+              imageGrid={project.sections[0]?.images || []}
               caption="Screens showing the user profile with community invite and coin buy screens."
             >
               <Text>
@@ -115,7 +121,7 @@ export default function PortfolioPodcastApp() {
             {/* Section Problem */}
             <PortfolioViewSection
               title="Problem"
-              images={project.sections[1]?.images || []}
+              imageGrid={project.sections[1]?.images || []}
               caption="Screens showing the feed with comment view."
             >
               <Text>
@@ -140,7 +146,7 @@ export default function PortfolioPodcastApp() {
             {/* Section Approach */}
             <PortfolioViewSection
               title="Approach"
-              images={project.sections[2]?.images || []}
+              imageGrid={project.sections[2]?.images || []}
               caption="Screens showing the app store concept and follow/unlockable post examples."
             >
               <Text as="h3" size="text-lg">

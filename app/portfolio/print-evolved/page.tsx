@@ -9,6 +9,7 @@ const project = {
   title: "Print Evolved - Internal Production Tools",
   subtitle:
     "Designing and building multiple web apps to streamline high-volume print operations.",
+  image: "/images/projects/print-evolved/preview.png",
 
   snapshot: [
     {
@@ -68,6 +69,7 @@ const project = {
         {
           src: "/images/projects/print-evolved/orders/orders-1.png",
           alt: "Orders list",
+          className: "col-span-2",
         },
         {
           src: "/images/projects/print-evolved/orders/orders-2.png",
@@ -138,6 +140,7 @@ export default function PortfolioPrint() {
             title={project.title}
             subtitle={project.subtitle}
             snapshot={project.snapshot}
+            image={project.image}
           />
 
           <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
@@ -178,7 +181,7 @@ export default function PortfolioPrint() {
             {/* Section Problem */}
             <PortfolioViewSection
               title="Problem"
-              images={project.sections[1]?.images || []}
+              imageGrid={project.sections[1]?.images || []}
               caption="Screens from the orders list with and batch invoice creation."
             >
               <div className="space-y-3">
@@ -207,7 +210,7 @@ export default function PortfolioPrint() {
             {/* Section Process */}
             <PortfolioViewSection
               title="Approach"
-              images={project.sections[2]?.images || []}
+              imageGrid={project.sections[2]?.images || []}
               caption="Invoices list with and add credit overlay."
             >
               <Text as="h3">1. Map real workflows</Text>
