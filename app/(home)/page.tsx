@@ -60,15 +60,20 @@ export default function Home() {
               className="rounded-full"
             />
             <h1 className="text-3xl font-bold text-stone-800 dark:text-stone-50 mt-4">
-              Patrick Allen
+              Patrick Allen <span className="font-normal text-stone-500 dark:text-stone-400">
+                Design Engineer
+              </span>
             </h1>
-            <div className="lg:text-xl mt-1 text-stone-500 dark:text-stone-400">
+            {/* <div className="lg:text-xl mt-1 text-stone-500 dark:text-stone-400">
               Senior Frontend Developer and UI Designer.
+            </div> */}
+            <div className="lg:text-lg- mt-1.5 text-stone-500 dark:text-stone-400">
+              TypeScript, Next.js, React, Figma, Claude Code
             </div>
           </div>
 
           <div className="flex flex-col gap-6 md:gap-8 mt-6 sm:mt-8">
-            {about.map((item, index) => (
+            {/* {about.map((item, index) => (
               <div
                 key={index}
                 className=" lg:text-lg- lg:leading-snug- text-stone-500 dark:text-stone-400"
@@ -78,7 +83,22 @@ export default function Home() {
                 </span>
                 {item.body}
               </div>
-            ))}
+            ))} */}
+
+            <div className="flex flex-col gap-4">
+              <div
+                className=" lg:text-lg lg:leading-snug- text-stone-500 dark:text-stone-400"
+              >
+                <span className="text-stone-800 dark:text-stone-50 font-medium">
+                  I design and build,&nbsp;
+                </span>
+                which means no handoff, no "waiting on dev", and nothing lost in translation. Whether that's a focused Build Week or something longer, I work fast and deliver something real.
+              </div>
+
+              <div className="lg:text-lg- lg:leading-snug- text-stone-500 dark:text-stone-400">
+                Recent work: internal tools running daily operations at a £20m+ revenue business.
+              </div>
+            </div>
           </div>
         </section>
 
@@ -99,7 +119,7 @@ export default function Home() {
             Pricing
           </h2>
 
-          <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
+          {/* <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
             {pricing.map((item, index) => (
               <div key={index}>
                 <div className=" lg:text-lg- lg:leading-snug- text-stone-500 dark:text-stone-400">
@@ -114,6 +134,43 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div> */}
+
+          <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
+            <div className="flex flex-col gap-4 md:gap-6 lg:text-lg lg:leading-snug-">
+              <div className="text-stone-500 dark:text-stone-400">
+                <span className="text-stone-800 dark:text-stone-50 font-medium">
+                  Build Week:&nbsp;
+                </span>
+                You probably know exactly what the problem is. The flow that confuses users. The page that never converted. The feature that shipped but never quite landed.
+              </div>
+
+              <div className="text-stone-500 dark:text-stone-400">
+                I take one focused problem, design the solution and build it — in a single week. No lengthy project, no slow back-and-forth. And because I design and build, nothing gets lost in handoff. You end the week with something working, not something waiting.
+              </div>
+
+              <div className="flex flex-col gap-2  text-stone-500 dark:text-stone-400">
+                <div className="text-stone-800 dark:text-stone-50 font-medium">
+                  This works well if you're:
+                </div>
+                <ul className="list-disc list-inside- ml-6 space-y-2 marker:text-stone-300 dark:marker:text-stone-500">
+                  <li>
+                    Sitting on a UX problem you keep de-prioritising
+                  </li>
+                  <li>
+                    Not happy with something AI shipped and nobody knows how to improve
+                  </li>
+                  <li>
+                    A growing product where the experience hasn't kept up with the features
+                  </li>
+                  <li>A founder or small team that needs to move fast</li>
+                </ul>
+              </div>
+
+              <div className="text-stone-800 dark:text-stone-50 font-medium mt-2">
+                From £2,500 +VAT
+              </div>
+            </div>
           </div>
 
           <div className="mt-8 md:mt-12">
