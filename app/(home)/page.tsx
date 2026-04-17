@@ -116,7 +116,8 @@ export default function Home() {
 
         <section className="py-16 px-8 max-w-screen-sm mx-auto">
           <h2 className="text-2xl font-bold text-stone-800 dark:text-stone-50">
-            Pricing
+            {/* Pricing */}
+            Build Week
           </h2>
 
           {/* <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
@@ -139,9 +140,9 @@ export default function Home() {
           <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
             <div className="flex flex-col gap-4 md:gap-6 lg:text-lg lg:leading-snug-">
               <div className="text-stone-500 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50 font-medium">
+                {/* <span className="text-stone-800 dark:text-stone-50 font-medium">
                   Build Week:&nbsp;
-                </span>
+                </span> */}
                 You probably know exactly what the problem is. The flow that confuses users. The page that never converted. The feature that shipped but never quite landed.
               </div>
 
@@ -149,7 +150,7 @@ export default function Home() {
                 I take one focused problem, design the solution and build it — in a single week. No lengthy project, no slow back-and-forth. And because I design and build, nothing gets lost in handoff. You end the week with something working, not something waiting.
               </div>
 
-              <div className="flex flex-col gap-2  text-stone-500 dark:text-stone-400">
+              <div className="flex flex-col gap-3 text-stone-500 dark:text-stone-400">
                 <div className="text-stone-800 dark:text-stone-50 font-medium">
                   This works well if you're:
                 </div>
@@ -167,22 +168,38 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="text-stone-800 dark:text-stone-50 font-medium mt-2">
-                From £2,500 +VAT
+              <div className="flex flex-col gap-3 text-stone-500 dark:text-stone-400">
+                <div className="text-stone-800 dark:text-stone-50 font-medium">
+                  How it works:
+                </div>
+                <ul className="list-disc list-inside- ml-6 space-y-2 marker:text-stone-300 dark:marker:text-stone-500">
+                  <li>
+                    <span className="text-stone-800 dark:text-stone-50 font-medium">Prior to the week</span> Scoping and alignment
+                  </li>
+                  <li>
+                    <span className="text-stone-800 dark:text-stone-50 font-medium">Days 1 – 4</span> Design and build
+                  </li>
+                  <li>
+                    <span className="text-stone-800 dark:text-stone-50 font-medium">Day 5</span> Review and handoff
+                  </li>
+                </ul>
+
+                <div className="text-stone-800 dark:text-stone-50 font-medium mt-2">
+                  From £2,500 +VAT
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="mt-8 md:mt-12">
-            <a
-              href="https://calendly.com/heypatrick/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-700 dark:text-indigo-100 font-bold border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900 hover:bg-indigo-100 dark:hover:bg-indigo-800 hover:border-indigo-300 hover:text-indigo-800 hover:dark:text-indigo-100 transition-all duration-300 px-5 py-3 rounded-md"
-            >
-              Request a Discovery Call
-            </a>
-          </div>
+            <div className="mt-8 md:mt-12">
+              <a
+                href="https://calendly.com/heypatrick/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-indigo-700 dark:text-indigo-100 font-bold border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900 hover:bg-indigo-100 dark:hover:bg-indigo-800 hover:border-indigo-300 hover:text-indigo-800 hover:dark:text-indigo-100 transition-all duration-300 px-5 py-3 rounded-md"
+              >
+                Request a Discovery Call
+              </a>
+            </div></div>
         </section>
       </main>
 
