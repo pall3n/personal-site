@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Patrick Allen: Design Engineer",
   description:
-    "Senior Freelance Design Engineer - Frontend Engineer, UI/UX Designer, and Product Designer",
+    "Senior Freelance Design Engineer - Frontend Engineer, UI/UX Designer, and Product Designer. TypeScript, Next.js, React.",
 };
 
 export default function RootLayout({
