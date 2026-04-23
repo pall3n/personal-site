@@ -27,7 +27,7 @@ export default function Landing() {
       style={mode === "contract" ? darkOverrides : undefined}
     >
       {/* ── Nav ── */}
-      {/* <nav className="flex justify-between items-center px-9 py-5">
+      {/* <nav className="flex justify-between items-center px-6 md:px-9 py-5">
         <div className="flex items-center gap-2.5">
           <div className="w-7 h-7 rounded-full bg-v8-accent" />
           <div className="font-serif italic text-[22px]">Patrick Allen</div>
@@ -39,8 +39,8 @@ export default function Landing() {
       </nav> */}
 
       {/* ── Hello block ── */}
-      <div className="px-9 pt-10 xl:pt-24 pb-5 xl:pb-10 max-w-[1000px] mx-auto">
-        <div className="grid grid-cols-[140px_1fr] gap-8 items-start">
+      <div className="px-6 md:px-9 pt-10 xl:pt-24 pb-5 xl:pb-10 max-w-[1000px] mx-auto">
+        <div className="grid md:grid-cols-[140px_1fr] gap-8 items-start">
           <div className="w-[140px] h-[140px] rounded-full overflow-hidden relative border border-v8-hairline">
             <Image
               src="/images/avatar.jpg"
@@ -62,7 +62,7 @@ export default function Landing() {
       </div>
 
       {/* ── Toggle ── */}
-      <div className="px-9 pt-10 xl:pt-16 pb-5 text-center">
+      <div className="px-6 md:px-9 pt-10 xl:pt-16 pb-5 text-center">
         <div className="text-xs xl:text-sm font-bold mb-4 tracking-[1.2px] uppercase text-v8-subtle">
           What are you here for?
         </div>
@@ -86,7 +86,7 @@ export default function Landing() {
                 console.log("[Toggle] clicked:", k, "| current mode:", mode);
                 setMode(k);
               }}
-              className="relative px-10 py-3.5 rounded-full bg-transparent border-none cursor-pointer text-sm xl:text-base font-semibold min-w-[180px] z-[1] text-textDark-500"
+              className="relative px-7 md:px-10 py-3.5 rounded-full bg-transparent border-none cursor-pointer text-sm xl:text-base font-semibold md:min-w-[180px] z-[1] text-textDark-500"
             >
               {l}
             </button>
@@ -95,8 +95,8 @@ export default function Landing() {
       </div>
 
       {/* ── Hero ── */}
-      <div className="px-9 pt-10 pb-[60px] text-center" key={mode}>
-        <h1 className="font-serif font-normal text-[96px] leading-[0.96] tracking-[-2.6px] mx-auto mb-6 max-w-[1000px]">
+      <div className="px-6 md:px-9 pt-10 pb-[60px] text-center" key={mode}>
+        <h1 className="font-serif font-normal text-5xl md:text-[96px] leading-[0.96] tracking-[-2.6px] mx-auto mb-6 max-w-[1000px]">
           {mode === "buildweek" ? (
             <>
               Five focused days.{" "}
@@ -115,8 +115,8 @@ export default function Landing() {
       </div>
 
       {/* ── Four-card grid ── */}
-      <div className="px-9 pb-[60px] max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-3 gap-4">
+      <div className="px-6 md:px-9 pb-[60px] max-w-[1200px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Deal card — always dark */}
           <div className="p-7 rounded-[4px] bg-v8-dark-card text-textDark-500">
             <div className="text-xs xl:text-sm font-bold tracking-[1.2px] uppercase opacity-60 mb-5">
@@ -153,7 +153,7 @@ export default function Landing() {
             </div>
             {mode === "buildweek" ? (
               <div>
-                <div className="grid grid-cols-5 gap-1.5 h-20">
+                <div className="hidden md:grid grid-cols-5 gap-1.5 h-20">
                   {["D1", "D2", "D3", "D4", "D5"].map((label, i) => (
                     <div
                       key={i}
@@ -176,7 +176,7 @@ export default function Landing() {
                     </div>
                   ))}
                 </div>
-                <div className="grid grid-cols-5 gap-2 mt-3.5">
+                <div className="grid md:grid-cols-5 gap-6 md:gap-2 mt-3.5">
                   {C.buildWeekSteps.slice(1).map((s, i) => (
                     <div key={i} className="text-xs">
                       <div className="text-xs xl:text-sm font-medium mb-0.5">
@@ -288,9 +288,9 @@ export default function Landing() {
       </div>
 
       {/* ── Leverage block ── */}
-      <div className="px-9 pb-[60px] max-w-[1200px] mx-auto">
-        <div className="p-9 rounded-[4px] bg-v8-card">
-          <div className="grid grid-cols-[1fr_2fr] gap-12 mb-8">
+      <div className="px-6 md:px-9 pb-[60px] max-w-[1200px] mx-auto">
+        <div className="p-6 md:p-9 rounded-[4px] bg-v8-card">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 mb-8">
             <div>
               <div className="text-xs xl:text-sm font-bold tracking-[1.2px] uppercase mb-3 text-v8-accent">
                 The leverage
@@ -303,11 +303,11 @@ export default function Landing() {
               {C.leverage.blurb}
             </p>
           </div>
-          <div className="grid grid-cols-4 border-t border-v8-hairline">
+          <div className="grid grid-cols-1 md:grid-cols-4 border-t border-v8-hairline">
             {C.leverage.items.map((it, i) => (
               <div
                 key={i}
-                className={`py-6 pr-6 ${i < C.leverage.items.length - 1 ? "border-r border-v8-hairline" : ""} ${i > 0 ? "pl-6" : ""}`}
+                className={`py-6 pr-6 ${i < C.leverage.items.length - 1 ? "border-b md:border-b-0 md:border-r border-v8-hairline" : ""} ${i > 0 ? "md:pl-6" : ""}`}
               >
                 <div className="font-mono text-xs xl:text-sm font-semibold mb-3 tracking-[1px] text-v8-accent">
                   {it.k}
@@ -326,9 +326,9 @@ export default function Landing() {
 
       {/* ── Sample scope (build week only) ── */}
       {mode === "buildweek" && (
-        <div className="px-9 pb-[60px] max-w-[1200px] mx-auto">
-          <div className="p-9 rounded-[4px] bg-v8-card">
-            <div className="grid grid-cols-[1fr_2fr] gap-12 mb-8">
+        <div className="px-6 md:px-9 pb-[60px] max-w-[1200px] mx-auto">
+          <div className="p-6 md:p-9 rounded-[4px] bg-v8-card">
+            <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 mb-8">
               <div>
                 <div className="text-xs xl:text-sm font-bold tracking-[1.2px] uppercase mb-3 text-v8-accent">
                   An example
@@ -348,7 +348,7 @@ export default function Landing() {
             </div>
 
             {/* Problem / Agreement / Outcome cards */}
-            <div className="grid grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {(
                 [
                   {
@@ -384,7 +384,7 @@ export default function Landing() {
 
             {/* Day table */}
             <div className="rounded-[3px] overflow-hidden border border-v8-hairline">
-              <div className="grid grid-cols-[88px_1fr_2fr] py-2.5 px-4 font-mono text-2xs xl:text-xs font-bold tracking-[1.2px] uppercase bg-v8-card-soft text-v8-subtle">
+              <div className="hidden md:grid grid-cols-[88px_1fr_2fr] py-2.5 px-4 font-mono text-2xs xl:text-xs font-bold tracking-[1.2px] uppercase bg-v8-card-soft text-v8-subtle">
                 <div>Day</div>
                 <div>Focus</div>
                 <div>Shipped</div>
@@ -392,7 +392,7 @@ export default function Landing() {
               {C.sampleScope.days.map((day, i) => (
                 <div
                   key={i}
-                  className="grid grid-cols-[88px_1fr_2fr] py-[18px] px-4 items-start border-t border-v8-hairline"
+                  className="grid md:grid-cols-[88px_1fr_2fr] gap-2 md:gap-0 py-[18px] px-4 items-start border-t border-v8-hairline"
                 >
                   <div className="font-mono text-sm xl:text-base font-medium text-v8-accent">
                     {day.d}
@@ -421,7 +421,7 @@ export default function Landing() {
       )}
 
       {/* ── Recent work ── */}
-      <div className="px-9 pt-10 pb-[60px] max-w-[1200px] mx-auto">
+      <div className="px-6 md:px-9 pt-10 pb-[60px] max-w-[1200px] mx-auto">
         <div className="flex items-baseline mb-6">
           <h2 className="font-serif font-normal text-[52px] m-0 tracking-[-1.2px]">
             Recent work
@@ -451,7 +451,7 @@ export default function Landing() {
       </div>
 
       {/* ── Bio + Writing + FAQ ── */}
-      <div className="px-9 pt-10 pb-[60px] max-w-[1200px] mx-auto">
+      <div className="px-6 md:px-9 pt-10 pb-[60px] max-w-[1200px] mx-auto">
         {/* <div className="grid grid-cols-[1.2fr_1fr] gap-12 mb-16"> */}
         {/* Bio card */}
         {/* <div className="p-8 rounded-[4px] bg-v8-card">
@@ -518,7 +518,7 @@ export default function Landing() {
       </div>
 
       {/* ── Footer ── */}
-      <footer className="px-9 py-6 flex justify-between text-xs border-t border-v8-hairline text-v8-subtle">
+      <footer className="px-6 md:px-9 py-6 flex justify-between text-xs border-t border-v8-hairline text-v8-subtle">
         <div>© 2026 Patrick Allen</div>
         <div className="flex gap-5">
           <a href="#" className="text-inherit">
