@@ -521,14 +521,14 @@ export default function Landing() {
       <footer className="px-6 md:px-9 py-6 flex justify-between text-xs border-t border-v8-hairline text-v8-subtle">
         <div>© 2026 Patrick Allen</div>
         <div className="flex gap-5">
-          <a href="#" className="text-inherit">
+          {/* <a href="#" className="text-inherit">
             Email
+          </a> */}
+          <a href="https://twitter.com/patrickallenxyz" target="_blank" className="text-inherit">
+            X (Twitter)
           </a>
-          <a href="#" className="text-inherit">
-            Twitter
-          </a>
-          <a href="#" className="text-inherit">
-            GitHub
+          <a href="https://www.linkedin.com/in/patrick-allen-a6496016" target="_blank" className="text-inherit">
+            LinkedIn
           </a>
         </div>
       </footer>
