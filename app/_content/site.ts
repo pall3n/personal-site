@@ -216,66 +216,131 @@ export const siteContent = {
     heading: "A sample Build Week",
     blurb:
       "A real scope from a recent engagement, lightly anonymised. Yours will look different, this is just the shape of it.",
-    client: "Fintech dashboard · Series A",
+    client: "B2C order platform · Legacy Perl stack",
     problem:
-      "Users dropped off at the 'connect bank account' step. We'd A/B tested three versions. None moved the needle.",
+      "Order history and detail screens were confusing customers. Support tickets about order status kept piling up, even though the data was all there.",
     agreement:
-      "Redesign + rebuild the connection flow, end-to-end, shipped behind a feature flag by Friday.",
+      "Audit the order screens, redesign history + detail end-to-end, ship the updates inside the existing Perl app by Friday.",
     days: [
       {
         d: "Mon",
         t: "Audit & reframe",
         b: [
-          "Watched 12 session recordings",
-          "2x user interviews",
-          "Re-framed the problem: trust, not friction",
-          "Sketched 4 directions, agreed on one",
+          "Read through 3 months of order-related support tickets",
+          "Got Claude Code mapping the Perl codebase (new stack for me)",
+          "Walked the current flow end-to-end",
+          "Sketched 3 directions, agreed on one with the team",
         ],
       },
       {
         d: "Tue",
         t: "Design the new flow",
         b: [
-          "Figma'd the 6 key screens",
-          "Wrote the new copy with the founder",
-          "Agreed edge cases & error states",
-          "Kickoff with the eng team on integration points",
+          "Figma'd the new history + detail views",
+          "Rewrote the status copy with the product owner",
+          "Mapped edge cases per user group and order type",
+          "Aligned with backend on which endpoints needed touching",
         ],
       },
       {
         d: "Wed",
         t: "Build the happy path",
         b: [
-          "Built the screens in the Next.js app",
-          "Wired up the Plaid SDK",
-          "Stubbed the error states",
-          "Deployed to preview",
+          "New HTML templates inside the Perl app",
+          "Vanilla JS components for the interactive bits",
+          "CSS updates across both screens",
+          "Deployed to staging",
         ],
       },
       {
         d: "Thu",
         t: "Edge cases & polish",
         b: [
-          "All 11 error states",
-          "Loading + success micro-interactions",
-          "Analytics events",
-          "Internal review with 3 team members",
+          "All the order states: pending, shipped, delivered, returned",
+          "Guest vs returning, multi-item, partial fulfilment",
+          "Empty + error states",
+          "Internal walkthrough with 2 team members",
         ],
       },
       {
         d: "Fri",
         t: "Ship & hand off",
         b: [
-          "Feature flag: 10% rollout",
-          "Loom walkthrough of the code",
-          "Handoff doc: rollout plan, metrics, known gaps",
+          "Perl code review with the lead dev",
+          "Loom walkthrough of the changes",
+          "Handoff doc: file map, gotchas, rollout plan",
           "End-of-week review call",
         ],
       },
     ],
     outcome:
-      "Completion rate +38% on the 10% cohort in week one. Rolled to 100% the following Monday.",
+      "Order-status support tickets dropped noticeably in the first weeks. Pattern reused for the next set of legacy screens.",
   },
+
+  // sampleScope: {
+  //   heading: "A sample Build Week",
+  //   blurb:
+  //     "A real scope from a recent engagement, lightly anonymised. Yours will look different, this is just the shape of it.",
+  //   client: "Fintech dashboard · Series A",
+  //   problem:
+  //     "Users dropped off at the 'connect bank account' step. We'd A/B tested three versions. None moved the needle.",
+  //   agreement:
+  //     "Redesign + rebuild the connection flow, end-to-end, shipped behind a feature flag by Friday.",
+  //   days: [
+  //     {
+  //       d: "Mon",
+  //       t: "Audit & reframe",
+  //       b: [
+  //         "Watched 12 session recordings",
+  //         "2x user interviews",
+  //         "Re-framed the problem: trust, not friction",
+  //         "Sketched 4 directions, agreed on one",
+  //       ],
+  //     },
+  //     {
+  //       d: "Tue",
+  //       t: "Design the new flow",
+  //       b: [
+  //         "Figma'd the 6 key screens",
+  //         "Wrote the new copy with the founder",
+  //         "Agreed edge cases & error states",
+  //         "Kickoff with the eng team on integration points",
+  //       ],
+  //     },
+  //     {
+  //       d: "Wed",
+  //       t: "Build the happy path",
+  //       b: [
+  //         "Built the screens in the Next.js app",
+  //         "Wired up the Plaid SDK",
+  //         "Stubbed the error states",
+  //         "Deployed to preview",
+  //       ],
+  //     },
+  //     {
+  //       d: "Thu",
+  //       t: "Edge cases & polish",
+  //       b: [
+  //         "All 11 error states",
+  //         "Loading + success micro-interactions",
+  //         "Analytics events",
+  //         "Internal review with 3 team members",
+  //       ],
+  //     },
+  //     {
+  //       d: "Fri",
+  //       t: "Ship & hand off",
+  //       b: [
+  //         "Feature flag: 10% rollout",
+  //         "Loom walkthrough of the code",
+  //         "Handoff doc: rollout plan, metrics, known gaps",
+  //         "End-of-week review call",
+  //       ],
+  //     },
+  //   ],
+  //   outcome:
+  //     "Completion rate +38% on the 10% cohort in week one. Rolled to 100% the following Monday.",
+  // },
 } as const;
 
 export type SiteContent = typeof siteContent;

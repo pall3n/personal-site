@@ -154,7 +154,7 @@ export default function Landing() {
             {mode === "buildweek" ? (
               <div>
                 <div className="hidden md:grid grid-cols-5 gap-1.5 h-20">
-                  {["D1", "D2", "D3", "D4", "D5"].map((label, i) => (
+                  {["MON", "TUE", "WED", "THU", "FRI"].map((label, i) => (
                     <div
                       key={i}
                       className="rounded-[3px] p-2.5 flex flex-col justify-between border border-v8-accent"
@@ -507,7 +507,7 @@ export default function Landing() {
             >
               <summary className="cursor-pointer font-serif text-[22px] list-none flex justify-between [&::-webkit-details-marker]:hidden">
                 <span>{f.q}</span>
-                <span className="text-v8-accent">+</span>
+                <span className="text-v8-accent transition-transform duration-200 group-open/faq:rotate-45">+</span>
               </summary>
               <div className="mt-2.5 text-[15px] leading-[1.55] max-w-[680px] text-v8-subtle">
                 {f.a}
