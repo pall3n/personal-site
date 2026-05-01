@@ -30,6 +30,30 @@ export const siteContent = {
 
   work: [
     {
+      img: "/images/work/image-7.png",
+      title: "Ops console",
+      client: "Logistics · £20m revenue",
+      problem:
+        "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
+    },
+
+    {
+      img: "/images/work/image-2.png",
+      title: "Ops console",
+      client: "Logistics · £20m revenue",
+      problem:
+        "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
+    },
+
+    {
+      img: "/images/work/image-9.png",
+      title: "Ops console",
+      client: "Logistics · £20m revenue",
+      problem:
+        "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
+    },
+
+    {
       img: "/images/work/image-1.png",
       title: "Ops console",
       client: "Logistics · £20m revenue",
@@ -37,7 +61,7 @@ export const siteContent = {
         "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
     },
     {
-      img: "/images/work/image-2.png",
+      img: "/images/work/image-8.png",
       title: "Booking flow",
       client: "B2C marketplace",
       problem:

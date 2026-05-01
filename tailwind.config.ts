@@ -36,6 +36,7 @@ export default {
           "on-accent": "var(--v8-on-accent)",
           accent: "var(--v8-accent)",
           "dark-card": "var(--v8-dark-card)",
+          "darker-card": "#241812",
           status: "var(--v8-status)",
         },
       },

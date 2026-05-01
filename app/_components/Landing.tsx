@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { siteContent as C, type Mode } from "@/app/_content/site";
 
@@ -19,7 +19,24 @@ const darkOverrides = {
 
 export default function Landing() {
   const [mode, setMode] = useState<Mode>("buildweek");
+  const [showStickyCta, setShowStickyCta] = useState(false);
+  const leverageRef = useRef<HTMLDivElement>(null);
   console.log("[Landing] current mode:", mode);
+
+  useEffect(() => {
+    const el = leverageRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowStickyCta(!entry.isIntersecting && entry.boundingClientRect.top < 0);
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div
@@ -115,7 +132,7 @@ export default function Landing() {
       </div>
 
       {/* ── Four-card grid ── */}
-      <div className="px-6 md:px-9 pb-[60px] max-w-[1200px] mx-auto">
+      <div ref={leverageRef} className="px-6 md:px-9 pb-[60px] max-w-[1200px] mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Deal card — always dark */}
           <div className="p-7 rounded-[4px] bg-v8-dark-card text-textDark-500">
@@ -135,7 +152,7 @@ export default function Landing() {
               href={C.ctaUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="block py-3 px-5 text-sm xl:text-base font-medium text-center rounded-[2px] bg-v8-accent text-v8-dark-card"
+              className="block py-3 px-5 text-sm xl:text-base font-semibold text-center rounded-[2px] bg-v8-accent text-v8-dark-card"
             >
               {C.cta} →
             </a>
@@ -532,6 +549,26 @@ export default function Landing() {
           </a>
         </div>
       </footer>
+
+      {/* ── Sticky CTA bar ── */}
+      <div
+        className={`fixed bottom-2 left-0 right-0 z-50 transition-all duration-300 text-center
+          ${showStickyCta ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"}`}
+      >
+        <div className="pl-6 pr-3 py-3 inline-flex gap-8 items-center justify-between  bg-v8-darker-card text-textDark-500 rounded-[4px]">
+          <span className="font-serif text-lg md:text-xl tracking-[-0.3px]">
+            Ready to talk?
+          </span>
+          <a
+            href={C.ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-2.5 px-5 text-sm font-semibold rounded-[2px] bg-v8-accent text-v8-dark-card"
+          >
+            {C.cta} →
+          </a>
+        </div>
+      </div>
     </div>
   );
 }
