@@ -543,8 +543,8 @@ export default function Landing() {
 
       {/* ── Sticky CTA bar ── */}
       <div
-        className={`fixed bottom-2 left-0 right-0 z-50 transition-all duration-300 text-center
-          ${showStickyCta ? "translate-y-0 opacity-100" : "translate-y-full opacity-0 pointer-events-none"}`}
+        className={`fixed bottom-2 left-0 right-0 z-50 transition-all duration-300 text-center pointer-events-none
+          ${showStickyCta ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}`}
       >
         <div className="pl-6 pr-3 py-3 inline-flex gap-8 items-center justify-between  bg-v8-darker-card text-textDark-500 rounded-[4px]">
           <span className="font-serif text-lg md:text-xl tracking-[-0.3px]">
