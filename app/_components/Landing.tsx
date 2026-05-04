@@ -18,7 +18,7 @@ const darkOverrides = {
 } as React.CSSProperties;
 
 export default function Landing() {
-  const [mode, setMode] = useState<Mode>("buildweek");
+  const [mode, setMode] = useState<Mode>("contract");
   const [showStickyCta, setShowStickyCta] = useState(false);
   const leverageRef = useRef<HTMLDivElement>(null);
   console.log("[Landing] current mode:", mode);
@@ -41,7 +41,6 @@ export default function Landing() {
   return (
     <div
       className="min-h-screen text-[15px] leading-[1.55] bg-v8-bg text-v8-text transition-colors duration-500"
-      style={mode === "contract" ? darkOverrides : undefined}
     >
       {/* ── Nav ── */}
       {/* <nav className="flex justify-between items-center px-6 md:px-9 py-5">
@@ -71,15 +70,15 @@ export default function Landing() {
               I&apos;m <span className="font-serif italic text-v8-accent">Patrick</span>. I design
               and build products end-to-end, and I&apos;ve been doing it for about a decade, usually at small teams where one person holding the whole picture matters more than an org chart.
             </p>
-            <p className="text-base xl:text-lg leading-[1.55] mt-5 mb-0 max-w-[640px] text-v8-subtle">
+            {/* <p className="text-base xl:text-lg leading-[1.55] mt-5 mb-0 max-w-[640px] text-v8-subtle">
               Lately I work two ways. There's a focused <em>Build Week</em> for one specific problem, or a longer <em>Project</em> embedded with your team. Pick whichever fits.
-            </p>
+            </p> */}
           </div>
         </div>
       </div>
 
       {/* ── Toggle ── */}
-      <div className="px-6 md:px-9 pt-10 xl:pt-16 pb-5 text-center">
+      {/* <div className="px-6 md:px-9 pt-10 xl:pt-16 pb-5 text-center">
         <div className="text-xs xl:text-sm font-bold mb-4 tracking-[1.2px] uppercase text-v8-subtle">
           What are you here for?
         </div>
@@ -109,22 +108,14 @@ export default function Landing() {
             </button>
           ))}
         </div>
-      </div>
+      </div> */}
 
       {/* ── Hero ── */}
       <div className="px-6 md:px-9 pt-10 pb-[60px] text-center" key={mode}>
         <h1 className="font-serif font-normal text-5xl md:text-[96px] leading-[0.96] tracking-[-2.6px] mx-auto mb-6 max-w-[1000px]">
-          {mode === "buildweek" ? (
-            <>
-              Five focused days.{" "}
-              <em className="text-v8-accent">One real thing</em> at the end.
-            </>
-          ) : (
-            <>
-              An extra pair of hands that{" "}
-              <em className="text-v8-accent">designs and builds</em>.
-            </>
-          )}
+
+          An extra pair of hands that{" "}
+          <em className="text-v8-accent">designs and builds</em>.
         </h1>
         <p className="text-lg leading-[1.5] max-w-[640px] mx-auto text-v8-subtle">
           {C.intro[mode]}
@@ -309,18 +300,18 @@ export default function Landing() {
         <div className="p-6 md:p-9 rounded-[4px] bg-v8-card">
           <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-12 mb-8">
             <div>
-              <div className="text-xs xl:text-sm font-bold tracking-[1.2px] uppercase mb-3 text-v8-accent">
+              <div className="text-xs xl:text-sm font-bold tracking-[1.2px] uppercase mb-3- text-v8-accent">
                 The leverage
               </div>
-              <h2 className="font-serif font-normal text-3xl xl:text-4xl m-0 tracking-[-1.2px] leading-[1.02]">
+              {/* <h2 className="font-serif font-normal text-3xl xl:text-4xl m-0 tracking-[-1.2px] leading-[1.02]">
                 {C.leverage.heading}
-              </h2>
+              </h2> */}
             </div>
-            <p className="text-base leading-[1.55] m-0 self-end text-v8-subtle">
+            {/* <p className="text-base leading-[1.55] m-0 self-end text-v8-subtle">
               {C.leverage.blurb}
-            </p>
+            </p> */}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 border-t border-v8-hairline">
+          <div className="grid grid-cols-1 md:grid-cols-2 border-t border-v8-hairline">
             {C.leverage.items.map((it, i) => (
               <div
                 key={i}

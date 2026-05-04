@@ -147,14 +147,14 @@ export const siteContent = {
   bio: "I'm Patrick. I've been designing and shipping software for about a decade — mostly for small teams where being able to do both matters. Before going independent I led product at a logistics platform that did £20m/yr. I live in the UK, I work remote, I bike a lot, and I've never sent a Loom longer than four minutes.",
 
   faq: [
-    {
-      q: "Why a week? Isn't that too short?",
-      a: "Most 'weeks' of work stretch into months because of process. Strip the process and you'd be surprised what fits in five focused days. It also forces us to be honest about scope.",
-    },
-    {
-      q: "What if we need more than a week?",
-      a: "You can either do mulitple build weeks or we can agree a contract instead. Usually this would be 4–12 weeks, paid monthly. A Build Week is a great way to find out if we like working together.",
-    },
+    // {
+    //   q: "Why a week? Isn't that too short?",
+    //   a: "Most 'weeks' of work stretch into months because of process. Strip the process and you'd be surprised what fits in five focused days. It also forces us to be honest about scope.",
+    // },
+    // {
+    //   q: "What if we need more than a week?",
+    //   a: "You can either do mulitple build weeks or we can agree a contract instead. Usually this would be 4–12 weeks, paid monthly. A Build Week is a great way to find out if we like working together.",
+    // },
     {
       q: "Who owns the code?",
       a: "You do. Day one. It's in your repo, under your licence, no strings.",
@@ -215,21 +215,11 @@ export const siteContent = {
     items: [
       {
         k: "01",
-        t: "Claude Code reads your repo on day one",
-        d: "Before our kickoff I've had Claude Code walk the codebase: conventions, data model, routing, the shape of the team's taste. I come in with a map, not blank.",
-      },
-      {
-        k: "02",
-        t: "A battle-tested starter stack",
-        d: "Next.js + Tailwind + Postgres patterns I've shipped a dozen times. Auth, emails, deploys, logging. Solved problems stay solved.",
-      },
-      {
-        k: "03",
         t: "AI-paired, human-owned",
         d: "Claude drafts, I review and edit. That's 2-3x output without the slop, and every line of code gets read by me before it gets committed.",
       },
       {
-        k: "04",
+        k: "02",
         t: "Design + build in one brain",
         d: "No Figma-to-Jira tax, no handoff meetings, no 'that's not quite what I meant.' The person making the pixel decisions is the person writing the JSX.",
       },
@@ -300,71 +290,6 @@ export const siteContent = {
     outcome:
       "Order-status support tickets dropped noticeably in the first weeks. Pattern reused for the next set of legacy screens.",
   },
-
-  // sampleScope: {
-  //   heading: "A sample Build Week",
-  //   blurb:
-  //     "A real scope from a recent engagement, lightly anonymised. Yours will look different, this is just the shape of it.",
-  //   client: "Fintech dashboard · Series A",
-  //   problem:
-  //     "Users dropped off at the 'connect bank account' step. We'd A/B tested three versions. None moved the needle.",
-  //   agreement:
-  //     "Redesign + rebuild the connection flow, end-to-end, shipped behind a feature flag by Friday.",
-  //   days: [
-  //     {
-  //       d: "Mon",
-  //       t: "Audit & reframe",
-  //       b: [
-  //         "Watched 12 session recordings",
-  //         "2x user interviews",
-  //         "Re-framed the problem: trust, not friction",
-  //         "Sketched 4 directions, agreed on one",
-  //       ],
-  //     },
-  //     {
-  //       d: "Tue",
-  //       t: "Design the new flow",
-  //       b: [
-  //         "Figma'd the 6 key screens",
-  //         "Wrote the new copy with the founder",
-  //         "Agreed edge cases & error states",
-  //         "Kickoff with the eng team on integration points",
-  //       ],
-  //     },
-  //     {
-  //       d: "Wed",
-  //       t: "Build the happy path",
-  //       b: [
-  //         "Built the screens in the Next.js app",
-  //         "Wired up the Plaid SDK",
-  //         "Stubbed the error states",
-  //         "Deployed to preview",
-  //       ],
-  //     },
-  //     {
-  //       d: "Thu",
-  //       t: "Edge cases & polish",
-  //       b: [
-  //         "All 11 error states",
-  //         "Loading + success micro-interactions",
-  //         "Analytics events",
-  //         "Internal review with 3 team members",
-  //       ],
-  //     },
-  //     {
-  //       d: "Fri",
-  //       t: "Ship & hand off",
-  //       b: [
-  //         "Feature flag: 10% rollout",
-  //         "Loom walkthrough of the code",
-  //         "Handoff doc: rollout plan, metrics, known gaps",
-  //         "End-of-week review call",
-  //       ],
-  //     },
-  //   ],
-  //   outcome:
-  //     "Completion rate +38% on the 10% cohort in week one. Rolled to 100% the following Monday.",
-  // },
 } as const;
 
 export type SiteContent = typeof siteContent;

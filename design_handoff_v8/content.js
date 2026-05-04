@@ -52,8 +52,8 @@ window.SITE_CONTENT = {
   bio: "I'm Patrick. I've been designing and shipping software for about a decade — mostly for small teams where being able to do both matters. Before going independent I led product at a logistics platform that did £20m/yr. I live in the UK, I work remote, I bike a lot, and I've never sent a Loom longer than four minutes.",
 
   faq: [
-    { q: "Why a week? Isn't that too short?", a: "Most 'weeks' of work stretch into months because of process. Strip the process and you'd be surprised what fits in five focused days. It also forces us to be honest about scope." },
-    { q: "What if we need more than a week?", a: "Then we'll agree a contract instead — usually 4–12 weeks, paid monthly. A Build Week is a great way to find out if we like working together." },
+    // { q: "Why a week? Isn't that too short?", a: "Most 'weeks' of work stretch into months because of process. Strip the process and you'd be surprised what fits in five focused days. It also forces us to be honest about scope." },
+    // { q: "What if we need more than a week?", a: "Then we'll agree a contract instead — usually 4–12 weeks, paid monthly. A Build Week is a great way to find out if we like working together." },
     { q: "Who owns the code?", a: "You do. Day one. It's in your repo, under your licence, no strings." },
     { q: "Do you work with designers / other engineers already on the team?", a: "Yes, often. I pair well. I can also work alone if that's what you need." },
     { q: "Do you take equity?", a: "Sometimes, for the right story. Cash first though." },
@@ -79,10 +79,10 @@ window.SITE_CONTENT = {
     heading: "How I move this fast",
     blurb: "A week is short. The reason I can ship something real in five days is that I've invested hard in the tooling around me, letting it do the undifferentiated heavy lifting.",
     items: [
-      { k: "01", t: "Claude Code reads your repo on day one", d: "Before our kickoff I've had Claude Code walk the codebase: conventions, data model, routing, the shape of the team's taste. I come in with a map, not blank." },
-      { k: "02", t: "A battle-tested starter stack", d: "Next.js + Tailwind + Postgres patterns I've shipped a dozen times. Auth, emails, deploys, logging. Solved problems stay solved." },
-      { k: "03", t: "AI-paired, human-owned", d: "Claude drafts, I review and edit. That's 2-3x output without the slop, and every line of code gets read by me before it gets committed." },
-      { k: "04", t: "Design + build in one brain", d: "No Figma-to-Jira tax, no handoff meetings, no 'that's not quite what I meant.' The person making the pixel decisions is the person writing the JSX." },
+      // { k: "01", t: "Claude Code reads your repo on day one", d: "Before our kickoff I've had Claude Code walk the codebase: conventions, data model, routing, the shape of the team's taste. I come in with a map, not blank." },
+      // { k: "02", t: "A battle-tested starter stack", d: "Next.js + Tailwind + Postgres patterns I've shipped a dozen times. Auth, emails, deploys, logging. Solved problems stay solved." },
+      { k: "01", t: "AI-paired, human-owned", d: "Claude drafts, I review and edit. That's 2-3x output without the slop, and every line of code gets read by me before it gets committed." },
+      { k: "02", t: "Design + build in one brain", d: "No Figma-to-Jira tax, no handoff meetings, no 'that's not quite what I meant.' The person making the pixel decisions is the person writing the JSX." },
     ],
   },
 
