@@ -49,11 +49,11 @@ const project = {
     {
       images: [
         {
-          src: "/images/projects/mity/feed-comment.png",
+          src: "/images/projects/mity/feed.png",
           alt: "Feed screen",
         },
         {
-          src: "/images/projects/mity/feed-scroll.png",
+          src: "/images/projects/mity/feed-comment.png",
           alt: "Feed screen",
         },
       ],
