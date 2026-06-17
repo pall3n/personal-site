@@ -101,7 +101,7 @@ function Post({
   pinned?: boolean;
 }) {
   return (
-    <div className="border-b border-v8-hairline px-4 py-4">
+    <div className="border-b- border rounded-xl border-v8-hairline px-4 py-4">
       {pinned && (
         <div className="pl-[48px] text-xs text-v8-subtle font-medium mb-2 flex items-center gap-1">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-v8-subtle">
@@ -193,7 +193,7 @@ export default function Landing() {
     <div className="min-h-screen text-[15px] leading-[1.55] bg-v8-bg text-v8-text">
       <div className="max-w-[1080px] mx-auto flex">
         {/* ── Feed column ── */}
-        <div className="flex-1 min-w-0 border-r border-v8-hairline lg:max-w-[calc(100%-320px)]">
+        <div className="flex-1 min-w-0 border-r- border-v8-hairline lg:max-w-[calc(100%-320px)]">
           {/* ── Profile Header ── */}
           <div>
             {/* Cover image */}
@@ -268,7 +268,7 @@ export default function Landing() {
             </div>
 
             {/* Tab bar */}
-            <div className="flex gap-4 border-b border-v8-hairline px-3 mt-4">
+            <div className="flex gap-6 border-b border-v8-hairline px-3 mt-4">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -289,331 +289,333 @@ export default function Landing() {
 
           {/* ── Posts feed ── */}
 
-          {/* 1. Pinned intro */}
-          {show("posts") && (
-            <Post
-              label="intro"
-              pinned
-              metrics={{ comments: "13", reposts: "26", likes: "214", views: "3K" }}
-            >
-              <h2 className="text-2xl font-bold tracking-tight leading-[1.2] mb-3">
-                An extra pair of hands that designs &amp; builds
-              </h2>
-              <p className="text-v8-subtle leading-[1.55]">
-                {C.intro.contract}
-              </p>
-            </Post>
-          )}
-
-          {/* 2. The problem */}
-          {show("posts") && (
-            <Post
-              label="the problem"
-              metrics={{ comments: "6", reposts: "12", likes: "98", views: "1.2K" }}
-            >
-              {C.problem.split("\n\n").map((para, i) => (
-                <p
-                  key={i}
-                  className={`leading-[1.4] ${i === 0 ? "text-xl font-bold tracking-tight" : "text-v8-subtle mt-3"
-                    }`}
-                >
-                  {para}
+          <div className="space-y-4 mt-4">
+            {/* 1. Pinned intro */}
+            {show("posts") && (
+              <Post
+                label="intro"
+                pinned
+                metrics={{ comments: "13", reposts: "26", likes: "214", views: "3K" }}
+              >
+                <h2 className="text-2xl font-bold tracking-tight leading-[1.2] mb-3">
+                  An extra pair of hands that designs &amp; builds
+                </h2>
+                <p className="text-v8-subtle leading-[1.55]">
+                  {C.intro.contract}
                 </p>
-              ))}
-            </Post>
-          )}
+              </Post>
+            )}
 
-          {/* 3. What I do */}
-          {show("posts") && (
-            <Post
-              label="what I do"
-              metrics={{ comments: "9", reposts: "17", likes: "142", views: "1.7K" }}
-            >
-              <p className="text-lg font-bold tracking-tight leading-[1.4] mb-3">
-                I design and build digital products end-to-end.{" "}
-                <mark className="bg-cyan-100 text-v8-text rounded px-0.5">
-                  No handoff. No waiting on dev.
-                </mark>{" "}
-                Nothing lost in translation.
-              </p>
-              <p className="text-v8-subtle leading-[1.55] mb-3">
-                From the first Figma frame to the deployed thing running in
-                production, one person holds the whole picture.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 text-xs font-medium rounded-full border border-cyan-300 text-cyan-700">
-                  #design
-                </span>
-                <span className="px-3 py-1 text-xs font-medium rounded-full border border-orange-300 text-orange-700">
-                  #build
-                </span>
-                <span className="px-3 py-1 text-xs font-medium rounded-full border border-green-300 text-green-700">
-                  #ship
-                </span>
-              </div>
-            </Post>
-          )}
+            {/* 2. The problem */}
+            {show("posts") && (
+              <Post
+                label="the problem"
+                metrics={{ comments: "6", reposts: "12", likes: "98", views: "1.2K" }}
+              >
+                {C.problem.split("\n\n").map((para, i) => (
+                  <p
+                    key={i}
+                    className={`leading-[1.4] ${i === 0 ? "text-xl font-bold tracking-tight" : "text-v8-subtle mt-3"
+                      }`}
+                  >
+                    {para}
+                  </p>
+                ))}
+              </Post>
+            )}
 
-          {/* 4. How I work */}
-          {show("posts") && (
-            <Post
-              label="how I work"
-              metrics={{ comments: "10", reposts: "20", likes: "167", views: "1.8K" }}
-            >
-              <div ref={howIWorkRef}>
-                <p className="text-v8-subtle mb-4">How the work actually gets done ↓</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <div className="rounded-xl bg-orange-50 p-5">
-                    <div className="flex gap-1.5 mb-3">
-                      <span className="w-2.5 h-2.5 rounded-full bg-orange-300" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-orange-200" />
+            {/* 3. What I do */}
+            {show("posts") && (
+              <Post
+                label="what I do"
+                metrics={{ comments: "9", reposts: "17", likes: "142", views: "1.7K" }}
+              >
+                <p className="text-lg font-bold tracking-tight leading-[1.4] mb-3">
+                  I design and build digital products end-to-end.{" "}
+                  <mark className="bg-cyan-100 text-v8-text rounded px-0.5">
+                    No handoff. No waiting on dev.
+                  </mark>{" "}
+                  Nothing lost in translation.
+                </p>
+                <p className="text-v8-subtle leading-[1.55] mb-3">
+                  From the first Figma frame to the deployed thing running in
+                  production, one person holds the whole picture.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="px-3 py-1 text-xs font-medium rounded-full border border-cyan-300 text-cyan-700">
+                    #design
+                  </span>
+                  <span className="px-3 py-1 text-xs font-medium rounded-full border border-orange-300 text-orange-700">
+                    #build
+                  </span>
+                  <span className="px-3 py-1 text-xs font-medium rounded-full border border-green-300 text-green-700">
+                    #ship
+                  </span>
+                </div>
+              </Post>
+            )}
+
+            {/* 4. How I work */}
+            {show("posts") && (
+              <Post
+                label="how I work"
+                metrics={{ comments: "10", reposts: "20", likes: "167", views: "1.8K" }}
+              >
+                <div ref={howIWorkRef}>
+                  <p className="text-v8-subtle mb-4">How the work actually gets done ↓</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="rounded-xl bg-orange-50 p-5">
+                      <div className="flex gap-1.5 mb-3">
+                        <span className="w-2.5 h-2.5 rounded-full bg-orange-300" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-orange-200" />
+                      </div>
+                      <div className="font-bold text-base mb-1">{C.leverage.items[0].t}</div>
+                      <p className="text-sm text-v8-subtle leading-[1.55]">{C.leverage.items[0].d}</p>
                     </div>
-                    <div className="font-bold text-base mb-1">{C.leverage.items[0].t}</div>
-                    <p className="text-sm text-v8-subtle leading-[1.55]">{C.leverage.items[0].d}</p>
-                  </div>
-                  <div className="rounded-xl bg-sky-50 p-5">
-                    <div className="flex gap-1.5 mb-3">
-                      <span className="w-2.5 h-2.5 rounded-full bg-sky-300" />
-                      <span className="w-2.5 h-2.5 rounded-full bg-sky-200" />
+                    <div className="rounded-xl bg-sky-50 p-5">
+                      <div className="flex gap-1.5 mb-3">
+                        <span className="w-2.5 h-2.5 rounded-full bg-sky-300" />
+                        <span className="w-2.5 h-2.5 rounded-full bg-sky-200" />
+                      </div>
+                      <div className="font-bold text-base mb-1">{C.leverage.items[1].t}</div>
+                      <p className="text-sm text-v8-subtle leading-[1.55]">{C.leverage.items[1].d}</p>
                     </div>
-                    <div className="font-bold text-base mb-1">{C.leverage.items[1].t}</div>
-                    <p className="text-sm text-v8-subtle leading-[1.55]">{C.leverage.items[1].d}</p>
                   </div>
                 </div>
-              </div>
-            </Post>
-          )}
+              </Post>
+            )}
 
-          {/* 5. Recent work */}
-          {show("work") && (
-            <Post
-              label="recent work"
-              metrics={{ comments: "23", reposts: "47", likes: "389", views: "3.9K" }}
-            >
-              <h3 className="text-lg font-bold tracking-tight mb-3">
-                Audio builds first. The craft holds up everywhere.
-              </h3>
-              {/* Featured project cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                {C.featuredProjects.map((proj, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-v8-hairline overflow-hidden"
-                  >
+            {/* 5. Recent work */}
+            {show("work") && (
+              <Post
+                label="recent work"
+                metrics={{ comments: "23", reposts: "47", likes: "389", views: "3.9K" }}
+              >
+                <h3 className="text-lg font-bold tracking-tight mb-3">
+                  Audio builds first. The craft holds up everywhere.
+                </h3>
+                {/* Featured project cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                  {C.featuredProjects.map((proj, i) => (
                     <div
-                      className={`h-28 ${proj.color === "orange"
-                        ? "bg-gradient-to-br from-orange-100 to-orange-50"
-                        : "bg-gradient-to-br from-cyan-100 to-cyan-50"
-                        }`}
-                    />
-                    <div className="p-3 flex items-center gap-2">
-                      <span
-                        className={`w-3 h-3 rounded-full ${proj.color === "orange" ? "bg-orange-400" : "bg-cyan-400"
+                      key={i}
+                      className="rounded-xl border border-v8-hairline overflow-hidden"
+                    >
+                      <div
+                        className={`h-28 ${proj.color === "orange"
+                          ? "bg-gradient-to-br from-orange-100 to-orange-50"
+                          : "bg-gradient-to-br from-cyan-100 to-cyan-50"
                           }`}
                       />
-                      <div>
-                        <div className="font-bold text-sm">{proj.name}</div>
-                        <div className="text-xs text-v8-subtle">{proj.subtitle}</div>
+                      <div className="p-3 flex items-center gap-2">
+                        <span
+                          className={`w-3 h-3 rounded-full ${proj.color === "orange" ? "bg-orange-400" : "bg-cyan-400"
+                            }`}
+                        />
+                        <div>
+                          <div className="font-bold text-sm">{proj.name}</div>
+                          <div className="text-xs text-v8-subtle">{proj.subtitle}</div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
-              {/* Thumbnail row */}
-              <div className="grid grid-cols-4 gap-2 rounded-lg overflow-hidden">
-                {C.work.map((w, i) => (
-                  <div key={i} className="aspect-[4/3] overflow-hidden rounded-lg">
-                    <img
-                      src={w.img}
-                      alt={w.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </Post>
-          )}
-
-          {/* 6. In their words */}
-          {show("work") && (
-            <Post
-              label="in their words"
-              metrics={{ comments: "5", reposts: "9", likes: "76", views: "1.1K" }}
-            >
-              <p className="text-v8-subtle mb-3">Kind words from people I&apos;ve shipped for ↓</p>
-              <div className="rounded-xl border border-v8-hairline p-5">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="w-8 h-8 rounded-full bg-orange-400 flex-shrink-0" />
-                  <div>
-                    <span className="font-bold text-sm">{C.socialProof.name}</span>
-                    <span className="text-v8-subtle text-sm"> · {C.socialProof.role}</span>
-                  </div>
+                  ))}
                 </div>
-                <p className="text-lg leading-[1.4] tracking-tight">
-                  &ldquo;{C.socialProof.quote}&rdquo;
+                {/* Thumbnail row */}
+                <div className="grid grid-cols-4 gap-2 rounded-lg overflow-hidden">
+                  {C.work.map((w, i) => (
+                    <div key={i} className="aspect-[4/3] overflow-hidden rounded-lg">
+                      <img
+                        src={w.img}
+                        alt={w.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </Post>
+            )}
+
+            {/* 6. In their words */}
+            {show("work") && (
+              <Post
+                label="in their words"
+                metrics={{ comments: "5", reposts: "9", likes: "76", views: "1.1K" }}
+              >
+                <p className="text-v8-subtle mb-3">Kind words from people I&apos;ve shipped for ↓</p>
+                <div className="rounded-xl border border-v8-hairline p-5">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-8 h-8 rounded-full bg-orange-400 flex-shrink-0" />
+                    <div>
+                      <span className="font-bold text-sm">{C.socialProof.name}</span>
+                      <span className="text-v8-subtle text-sm"> · {C.socialProof.role}</span>
+                    </div>
+                  </div>
+                  <p className="text-lg leading-[1.4] tracking-tight">
+                    &ldquo;{C.socialProof.quote}&rdquo;
+                  </p>
+                </div>
+                <p className="text-v8-subtle mt-3 text-sm leading-[1.55]">
+                  Recent work includes tools for teams in audio &amp; podcasting, ops &amp; SaaS, and creator tools.
                 </p>
-              </div>
-              <p className="text-v8-subtle mt-3 text-sm leading-[1.55]">
-                Recent work includes tools for teams in audio &amp; podcasting, ops &amp; SaaS, and creator tools.
-              </p>
-            </Post>
-          )}
+              </Post>
+            )}
 
-          {/* 7. Working together */}
-          {show("posts") && (
-            <Post
-              label="working together"
-              metrics={{ comments: "12", reposts: "24", likes: "203", views: "2.6K" }}
-            >
-              <h3 className="text-lg font-bold tracking-tight mb-3">
-                Two ways in. 🤝
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
-                <div className="rounded-xl bg-v8-card-soft p-5">
-                  <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-v8-accent text-white mb-3">
-                    {C.engagement.sprint.subtitle}
-                  </span>
-                  <div className="font-bold text-base mb-1">{C.engagement.sprint.title}</div>
-                  <p className="text-sm text-v8-subtle leading-[1.55]">
-                    {C.engagement.sprint.description}
-                  </p>
-                </div>
-                <div className="rounded-xl bg-v8-card-soft p-5">
-                  <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-v8-accent text-white mb-3">
-                    {C.engagement.embed.subtitle}
-                  </span>
-                  <div className="font-bold text-base mb-1">{C.engagement.embed.title}</div>
-                  <p className="text-sm text-v8-subtle leading-[1.55]">
-                    {C.engagement.embed.description}
-                  </p>
-                </div>
-              </div>
-              {/* WalkAway highlight */}
-              <div className="rounded-xl bg-gradient-to-br from-violet-500 to-violet-400 p-5 text-white">
-                <p className="text-sm leading-[1.55] font-medium">{C.engagement.walkAway}</p>
-              </div>
-            </Post>
-          )}
-
-          {/* 8. Right fit if */}
-          {show("posts") && (
-            <Post
-              label="right fit if"
-              metrics={{ comments: "9", reposts: "18", likes: "151", views: "2.1K" }}
-            >
-              <p className="text-v8-subtle mb-3">We&apos;re a good fit if ↓</p>
-              <div className="flex flex-col gap-2">
-                {C.contractFit.map((f, i) => (
-                  <div key={i} className="flex items-start gap-2.5">
-                    <span className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
-                        <path d="M20 6L9 17l-5-5" />
-                      </svg>
+            {/* 7. Working together */}
+            {show("posts") && (
+              <Post
+                label="working together"
+                metrics={{ comments: "12", reposts: "24", likes: "203", views: "2.6K" }}
+              >
+                <h3 className="text-lg font-bold tracking-tight mb-3">
+                  Two ways in. 🤝
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                  <div className="rounded-xl bg-v8-card-soft p-5">
+                    <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-v8-accent text-white mb-3">
+                      {C.engagement.sprint.subtitle}
                     </span>
-                    <span className="text-[15px] leading-[1.55]">{f}</span>
+                    <div className="font-bold text-base mb-1">{C.engagement.sprint.title}</div>
+                    <p className="text-sm text-v8-subtle leading-[1.55]">
+                      {C.engagement.sprint.description}
+                    </p>
                   </div>
-                ))}
-              </div>
-            </Post>
-          )}
-
-          {/* 9. The price */}
-          {show("posts") && (
-            <Post
-              label="the price"
-              metrics={{ comments: "7", reposts: "14", likes: "118", views: "1.1K" }}
-            >
-              <p className="text-v8-subtle mb-3">
-                No surprises. You know the number before we start. ↓
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div className="rounded-xl bg-v8-card-soft p-5">
-                  <div className="text-xs font-semibold text-v8-subtle uppercase tracking-wide mb-2">
-                    a sprint
+                  <div className="rounded-xl bg-v8-card-soft p-5">
+                    <span className="inline-block px-2.5 py-0.5 text-xs font-semibold rounded-full bg-v8-accent text-white mb-3">
+                      {C.engagement.embed.subtitle}
+                    </span>
+                    <div className="font-bold text-base mb-1">{C.engagement.embed.title}</div>
+                    <p className="text-sm text-v8-subtle leading-[1.55]">
+                      {C.engagement.embed.description}
+                    </p>
                   </div>
-                  <div className="text-xl font-bold tracking-tight mb-1">Quoted per project</div>
-                  <p className="text-sm text-v8-subtle">Fixed scope and price.</p>
                 </div>
-                <div className="rounded-xl bg-v8-card-soft p-5">
-                  <div className="text-xs font-semibold text-v8-subtle uppercase tracking-wide mb-2">
-                    embedded
-                  </div>
-                  <div className="text-2xl font-bold tracking-tight text-v8-accent mb-0.5">
-                    {C.pricing.contract.amount}
-                  </div>
-                  <div className="text-sm text-v8-subtle">{C.pricing.contract.unit}</div>
-                  <p className="text-sm text-v8-subtle mt-1">{C.pricing.contract.line}</p>
+                {/* WalkAway highlight */}
+                <div className="rounded-xl bg-gradient-to-br from-violet-500 to-violet-400 p-5 text-white">
+                  <p className="text-sm leading-[1.55] font-medium">{C.engagement.walkAway}</p>
                 </div>
-              </div>
-            </Post>
-          )}
+              </Post>
+            )}
 
-          {/* 10. In the replies (FAQ) */}
-          {show("faq") && (
-            <Post
-              label="FAQ"
-              metrics={{ comments: "4", reposts: "8", likes: "64", views: "768" }}
-            >
-              <h3 className="text-lg font-bold tracking-tight mb-3">
-                Answering the usual questions. 💬
-              </h3>
-              <div className="flex flex-col gap-2">
-                {C.faq.map((f, i) => (
-                  <div
-                    key={i}
-                    className="rounded-xl border border-v8-hairline overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      className="w-full flex items-center gap-3 p-4 text-left"
-                    >
-                      <span className="w-7 h-7 rounded-full bg-violet-100 flex-shrink-0 flex items-center justify-center">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgb(139,92,246)" strokeWidth="2">
-                          <circle cx="12" cy="12" r="10" />
-                          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-                          <circle cx="12" cy="17" r="0.5" fill="rgb(139,92,246)" />
+            {/* 8. Right fit if */}
+            {show("posts") && (
+              <Post
+                label="right fit if"
+                metrics={{ comments: "9", reposts: "18", likes: "151", views: "2.1K" }}
+              >
+                <p className="text-v8-subtle mb-3">We&apos;re a good fit if ↓</p>
+                <div className="flex flex-col gap-2">
+                  {C.contractFit.map((f, i) => (
+                    <div key={i} className="flex items-start gap-2.5">
+                      <span className="w-5 h-5 rounded-full bg-green-500 flex-shrink-0 flex items-center justify-center mt-0.5">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3">
+                          <path d="M20 6L9 17l-5-5" />
                         </svg>
                       </span>
-                      <span className="font-medium text-[15px] flex-1">{f.q}</span>
-                      <span className="text-v8-subtle text-lg leading-none transition-transform duration-200">
-                        {openFaq === i ? "−" : "+"}
-                      </span>
-                    </button>
-                    {openFaq === i && (
-                      <div className="px-4 pb-4 pl-14 text-[15px] text-v8-subtle leading-[1.55]">
-                        {f.a}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </Post>
-          )}
+                      <span className="text-[15px] leading-[1.55]">{f}</span>
+                    </div>
+                  ))}
+                </div>
+              </Post>
+            )}
 
-          {/* 11. Final CTA */}
-          {show("posts") && (
-            <div className="border-b border-v8-hairline px-4 py-8 text-center">
-              <div className="flex justify-center gap-3 mb-5">
-                <span className="w-10 h-10 rounded-full bg-orange-400" />
-                <span className="w-10 h-10 rounded-full bg-violet-400" />
-                <span className="w-10 h-10 rounded-full bg-cyan-400" />
-              </div>
-              <h2 className="text-5xl font-bold tracking-tight mb-5">
-                Ready to talk?
-              </h2>
-              <a
-                href={C.ctaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block py-3 px-8 text-base font-semibold rounded-full bg-v8-darker-card text-white"
+            {/* 9. The price */}
+            {show("posts") && (
+              <Post
+                label="the price"
+                metrics={{ comments: "7", reposts: "14", likes: "118", views: "1.1K" }}
               >
-                {C.cta} →
-              </a>
-              <p className="text-sm text-v8-subtle mt-3">
-                clear proposal back the same day, no obligation
-              </p>
-            </div>
-          )}
+                <p className="text-v8-subtle mb-3">
+                  No surprises. You know the number before we start. ↓
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div className="rounded-xl bg-v8-card-soft p-5">
+                    <div className="text-xs font-semibold text-v8-subtle uppercase tracking-wide mb-2">
+                      a sprint
+                    </div>
+                    <div className="text-xl font-bold tracking-tight mb-1">Quoted per project</div>
+                    <p className="text-sm text-v8-subtle">Fixed scope and price.</p>
+                  </div>
+                  <div className="rounded-xl bg-v8-card-soft p-5">
+                    <div className="text-xs font-semibold text-v8-subtle uppercase tracking-wide mb-2">
+                      embedded
+                    </div>
+                    <div className="text-2xl font-bold tracking-tight text-v8-accent mb-0.5">
+                      {C.pricing.contract.amount}
+                    </div>
+                    <div className="text-sm text-v8-subtle">{C.pricing.contract.unit}</div>
+                    <p className="text-sm text-v8-subtle mt-1">{C.pricing.contract.line}</p>
+                  </div>
+                </div>
+              </Post>
+            )}
+
+            {/* 10. In the replies (FAQ) */}
+            {show("faq") && (
+              <Post
+                label="FAQ"
+                metrics={{ comments: "4", reposts: "8", likes: "64", views: "768" }}
+              >
+                <h3 className="text-lg font-bold tracking-tight mb-3">
+                  Answering the usual questions. 💬
+                </h3>
+                <div className="flex flex-col gap-2">
+                  {C.faq.map((f, i) => (
+                    <div
+                      key={i}
+                      className="rounded-xl border border-v8-hairline overflow-hidden"
+                    >
+                      <button
+                        onClick={() => setOpenFaq(openFaq === i ? null : i)}
+                        className="w-full flex items-center gap-3 p-4 text-left"
+                      >
+                        <span className="w-7 h-7 rounded-full bg-violet-100 flex-shrink-0 flex items-center justify-center">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgb(139,92,246)" strokeWidth="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                            <circle cx="12" cy="17" r="0.5" fill="rgb(139,92,246)" />
+                          </svg>
+                        </span>
+                        <span className="font-medium text-[15px] flex-1">{f.q}</span>
+                        <span className="text-v8-subtle text-lg leading-none transition-transform duration-200">
+                          {openFaq === i ? "−" : "+"}
+                        </span>
+                      </button>
+                      {openFaq === i && (
+                        <div className="px-4 pb-4 pl-14 text-[15px] text-v8-subtle leading-[1.55]">
+                          {f.a}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </Post>
+            )}
+
+            {/* 11. Final CTA */}
+            {show("posts") && (
+              <div className="border-b border-v8-hairline px-4 py-8 text-center">
+                <div className="flex justify-center gap-3 mb-5">
+                  <span className="w-10 h-10 rounded-full bg-orange-400" />
+                  <span className="w-10 h-10 rounded-full bg-violet-400" />
+                  <span className="w-10 h-10 rounded-full bg-cyan-400" />
+                </div>
+                <h2 className="text-5xl font-bold tracking-tight mb-5">
+                  Ready to talk?
+                </h2>
+                <a
+                  href={C.ctaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block py-3 px-8 text-base font-semibold rounded-full bg-v8-darker-card text-white"
+                >
+                  {C.cta} →
+                </a>
+                <p className="text-sm text-v8-subtle mt-3">
+                  clear proposal back the same day, no obligation
+                </p>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* ── Right Sidebar ── */}
@@ -656,7 +658,7 @@ export default function Landing() {
             </div>
 
             {/* Widget 3: CTA card */}
-            <div className="rounded-xl bg-gradient-to-br from-violet-400 to-violet-300 p-5">
+            <div className="rounded-xl bg-gradient-to-br from-violet-500/90 to-violet-400 p-5">
               <div className="text-xs font-medium text-white/70 mb-1">available now</div>
               <h3 className="font-bold text-white text-lg mb-3">Taking on new work.</h3>
               <a
