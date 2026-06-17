@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Inter, JetBrains_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Fathom from "../components/fathom";
 
@@ -7,13 +7,6 @@ const sans = Inter({
   weight: ["400", "500", "600"],
   subsets: ["latin"],
   variable: "--font-sans",
-});
-
-const serif = Instrument_Serif({
-  weight: ["400"],
-  style: ["normal", "italic"],
-  subsets: ["latin"],
-  variable: "--font-serif",
 });
 
 const mono = JetBrains_Mono({
@@ -36,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${sans.variable} ${serif.variable} ${mono.variable} font-sans antialiased`}
+        className={`${sans.variable} ${mono.variable} font-sans antialiased`}
       >
         <Fathom />
         {children}

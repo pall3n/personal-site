@@ -2,31 +2,59 @@ export const siteContent = {
   name: "Patrick Allen",
   role: "Design Engineer",
   location: "Remote · UK",
-  status: "Taking on work · May–June 2026",
+  status: "Available now · taking on work",
+  handle: "@patrickallen",
+
+  bio: "Designer + engineer in one brain. I take a thing and make it good — end to end, without being managed. A decade of it, lately in audio & podcasting.",
+
+  profileMeta: [
+    { icon: "clock", text: "available for work" },
+    { icon: "link", text: "patrickallen.xyz", href: "https://patrickallen.xyz" },
+    { icon: "calendar", text: "a decade shipping" },
+  ],
+
+  profileStats: [
+    { value: "2", label: "ways to work" },
+    { value: "100%", label: "design + build" },
+    { value: "0", label: "handoff tax" },
+  ],
+
+  featuredProjects: [
+    { name: "pontus.fm", subtitle: "micro-SaaS in podcasting", color: "orange" },
+    { name: "transcript-chat", subtitle: "ask across an episode", color: "mint" },
+  ],
 
   intro: {
     contract:
-      "I design and build digital products end-to-end. No handoff, no 'waiting on dev', nothing lost in translation. I work with founders and small teams who need someone who can hold the whole picture, from the first Figma frame to the deployed thing running in production.",
-    buildweek:
-      "You probably know exactly what the problem is. The flow that confuses users. The page that never converted. The feature that shipped but never quite landed. Give me a week. I'll design it, build it, and hand it back working.",
+      "I design and build digital products end-to-end. No handoff, no \"waiting on dev,\" nothing lost in translation. I work with founders and small software teams who need someone who can hold the whole picture, from the first Figma frame to the deployed thing running in production.",
   },
 
-  heroLine: {
-    contract:
-      "Design-led product work for teams that want it shipped, not shepherded.",
-    buildweek: "One problem. Five days. Something real at the end of it.",
+  problem:
+    "You're shipping fast with a small team. The product works, but there's a backlog of things that never get the polish they deserve — the flow that's almost right, the feature that's been 'next quarter' for three quarters, the screens that look like engineers built them.\n\nYou don't have a spare designer. You don't want the overhead of a hire or the layers of an agency. You just need someone who can take a thing and make it good, end to end, without being managed.",
+
+  socialProof: {
+    quote:
+      "Extremely competent in both UI/UX design and technical implementation...",
+    name: "James Bree",
+    role: "Solutions Architect",
   },
 
-  stack: [
-    "TypeScript",
-    "Next.js",
-    "React",
-    "Tailwind",
-    "Figma",
-    "Claude Code",
-    "Postgres",
-    "tRPC",
-  ],
+  engagement: {
+    sprint: {
+      title: "Start with a sprint.",
+      subtitle: "1–2 weeks",
+      description:
+        "Fixed scope and price. One specific thing, designed and shipped — the easiest way to try working together.",
+    },
+    embed: {
+      title: "Or embed for a stretch.",
+      subtitle: "4–12 weeks",
+      description:
+        "An extra senior pair of hands on your roadmap, by the week. Weekly delivery, async-first.",
+    },
+    walkAway:
+      "What you walk away with: shipped features every week, work that looks designed not assembled, a clean handoff, and a product that moved while your team kept its focus.",
+  },
 
   work: [
     {
@@ -36,7 +64,6 @@ export const siteContent = {
       problem:
         "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
     },
-
     {
       img: "/images/work/image-2.png",
       title: "Ops console",
@@ -44,7 +71,6 @@ export const siteContent = {
       problem:
         "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
     },
-
     {
       img: "/images/work/image-9.png",
       title: "Ops console",
@@ -52,7 +78,6 @@ export const siteContent = {
       problem:
         "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
     },
-
     {
       img: "/images/work/image-1.png",
       title: "Ops console",
@@ -60,144 +85,44 @@ export const siteContent = {
       problem:
         "Daily operations ran on four spreadsheets and a prayer. Built a unified console that now runs their whole dispatch.",
     },
-    {
-      img: "/images/work/image-8.png",
-      title: "Booking flow",
-      client: "B2C marketplace",
-      problem:
-        "Abandon rate at 68%. Redesigned and shipped the checkout in three weeks. Now at 41%.",
-    },
-    {
-      img: "/images/work/image-3.png",
-      title: "Inventory dashboard",
-      client: "DTC brand",
-      problem:
-        "Warehouse team flying blind on stock. Real-time dash with alerts, predictive re-order, the lot.",
-    },
-    {
-      img: "/images/work/image-4.png",
-      title: "Onboarding redesign",
-      client: "SaaS · Series A",
-      problem:
-        "Day-1 activation was 22%. Rebuilt the first-run experience around a single 'aha' moment. Now 58%.",
-    },
-    {
-      img: "/images/work/image-5.png",
-      title: "Admin tools",
-      client: "Fintech",
-      problem:
-        "Support team raising 80 tickets a day to engineering. Gave them self-serve tools. Tickets down 90%.",
-    },
-    {
-      img: "/images/work/image-6.png",
-      title: "Marketing site",
-      client: "Early-stage startup",
-      problem:
-        "Generic SaaS template. Rebuilt it around the actual product story. Conversion doubled.",
-    },
-  ],
-
-  buildWeekSteps: [
-    {
-      label: "Before",
-      title: "Scoping call",
-      desc: "30 mins. We agree the one problem and what 'done' looks like.",
-    },
-    {
-      label: "Day 1",
-      title: "Discover & design",
-      desc: "I dig into the problem, map the flow, start putting pixels down.",
-    },
-    {
-      label: "Day 2",
-      title: "Build the core",
-      desc: "Ship the main path end-to-end. Rough but real.",
-    },
-    {
-      label: "Day 3",
-      title: "Polish & extend",
-      desc: "Edge cases, error states, the details that make it feel finished.",
-    },
-    {
-      label: "Day 4",
-      title: "Integrate & test",
-      desc: "Hook into your stack, check it doesn't break anything, iterate on feedback.",
-    },
-    {
-      label: "Day 5",
-      title: "Review & handoff",
-      desc: "Walk you through it. Deploy. You own the code, I stay on slack for questions.",
-    },
-  ],
-
-  buildWeekFit: [
-    "You're sitting on a UX problem you keep de-prioritising",
-    "You're not happy with something AI shipped and nobody knows how to improve it",
-    "You're a growing product where the experience hasn't kept up with the features",
-    "You're a founder or small team that needs to move fast",
   ],
 
   contractFit: [
-    "You need a design-engineer embedded in a team for 1–3 months",
-    "You're building an internal tool and want it to feel like a product, not a form",
-    "You have a vague mandate ('make the app better') and need someone to own it",
-    "You're a founder who wants design and engineering in one brain",
+    "You're a small software team shipping fast, and the backlog of \"we'll get to it\" never gets got to",
+    "Your product works but looks like engineers built it, and you want it to feel designed",
+    "You're in audio, podcasting, or creator tools and want someone who already knows the space",
+    "You need design and engineering in one brain, without a hire or an agency layer",
+    "You've got a specific feature, idea or flow that needs to ship properly, not eventually",
   ],
 
-  bio: "I'm Patrick. I've been designing and shipping software for about a decade — mostly for small teams where being able to do both matters. Before going independent I led product at a logistics platform that did £20m/yr. I live in the UK, I work remote, I bike a lot, and I've never sent a Loom longer than four minutes.",
-
   faq: [
-    // {
-    //   q: "Why a week? Isn't that too short?",
-    //   a: "Most 'weeks' of work stretch into months because of process. Strip the process and you'd be surprised what fits in five focused days. It also forces us to be honest about scope.",
-    // },
-    // {
-    //   q: "What if we need more than a week?",
-    //   a: "You can either do mulitple build weeks or we can agree a contract instead. Usually this would be 4–12 weeks, paid monthly. A Build Week is a great way to find out if we like working together.",
-    // },
     {
       q: "Who owns the code?",
       a: "You do. Day one. It's in your repo, under your licence, no strings.",
     },
     {
+      q: "Do you know the audio / video / podcast space?",
+      a: "Yes. I've built and shipped my own tools in it, including pontus.fm and a podcast transcript-chat app. I know the stack and the problems, so there's no ramp-up time on the domain.",
+    },
+    {
+      q: "What kinds of engagement do you take?",
+      a: "Two shapes: a 1 to 2 week sprint to ship one specific thing, fixed scope and price, or embedded by the week as an extra pair of hands on your roadmap. Not sure which, book a call and we'll work it out.",
+    },
+    {
       q: "Do you work with designers / other engineers already on the team?",
       a: "Yes, often. I pair well. I can also work alone if that's what you need.",
     },
-    // {
-    //   q: "Do you take equity?",
-    //   a: "Sometimes, for the right story. Cash first though.",
-    // },
-  ],
-
-  notes: [
     {
-      date: "Apr 2026",
-      title: "What a 'design engineer' actually does, in 2026",
-      len: "7 min",
+      q: "What's your stack?",
+      a: "TypeScript across Next.js, React, and React Native. Comfortable in most modern frontend stacks and design systems.",
     },
     {
-      date: "Mar 2026",
-      title: "Why the handoff model is broken for small teams",
-      len: "4 min",
-    },
-    {
-      date: "Feb 2026",
-      title: "Five build weeks in: what I'd change",
-      len: "5 min",
-    },
-    {
-      date: "Jan 2026",
-      title: "How I scope a week of work in a 30-min call",
-      len: "3 min",
+      q: "How do we start?",
+      a: "Book a 20-minute call. No obligation, and you'll get a clear proposal back the same day.",
     },
   ],
 
   pricing: {
-    buildweek: {
-      amount: "£2,750",
-      unit: "+ VAT · per week",
-      line: "Flat rate. No surprises.",
-    },
     contract: {
       amount: "£450",
       unit: "+ VAT · per day",
@@ -205,7 +130,7 @@ export const siteContent = {
     },
   },
 
-  cta: "Book a discovery call",
+  cta: "Book a 20-minute call",
   ctaUrl: "https://calendly.com/heypatrick/30min",
 
   leverage: {
@@ -225,72 +150,7 @@ export const siteContent = {
       },
     ],
   },
-
-  sampleScope: {
-    heading: "A sample Build Week",
-    blurb:
-      "A real scope from a recent engagement, lightly anonymised. Yours will look different, this is just the shape of it.",
-    client: "B2C order platform · Legacy Perl stack",
-    problem:
-      "Order history and detail screens were confusing customers. Support tickets about order status kept piling up, even though the data was all there.",
-    agreement:
-      "Audit the order screens, redesign history + detail end-to-end, ship the updates inside the existing Perl app by Friday.",
-    days: [
-      {
-        d: "Mon",
-        t: "Audit & reframe",
-        b: [
-          "Read through 3 months of order-related support tickets",
-          "Got Claude Code mapping the Perl codebase (new stack for me)",
-          "Walked the current flow end-to-end",
-          "Sketched 3 directions, agreed on one with the team",
-        ],
-      },
-      {
-        d: "Tue",
-        t: "Design the new flow",
-        b: [
-          "Figma'd the new history + detail views",
-          "Rewrote the status copy with the product owner",
-          "Mapped edge cases per user group and order type",
-          "Aligned with backend on which endpoints needed touching",
-        ],
-      },
-      {
-        d: "Wed",
-        t: "Build the happy path",
-        b: [
-          "New HTML templates inside the Perl app",
-          "Vanilla JS components for the interactive bits",
-          "CSS updates across both screens",
-          "Deployed to staging",
-        ],
-      },
-      {
-        d: "Thu",
-        t: "Edge cases & polish",
-        b: [
-          "All the order states: pending, shipped, delivered, returned",
-          "Guest vs returning, multi-item, partial fulfilment",
-          "Empty + error states",
-          "Internal walkthrough with 2 team members",
-        ],
-      },
-      {
-        d: "Fri",
-        t: "Ship & hand off",
-        b: [
-          "Perl code review with the lead dev",
-          "Loom walkthrough of the changes",
-          "Handoff doc: file map, gotchas, rollout plan",
-          "End-of-week review call",
-        ],
-      },
-    ],
-    outcome:
-      "Order-status support tickets dropped noticeably in the first weeks. Pattern reused for the next set of legacy screens.",
-  },
 } as const;
 
 export type SiteContent = typeof siteContent;
-export type Mode = "buildweek" | "contract";
+export type Mode = "contract";

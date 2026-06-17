@@ -4,16 +4,16 @@
 
 @layer base {
   :root {
-    --v8-bg: #F4F0E8;
-    --v8-text: #1E160F;
-    --v8-card: #F5ECDB;
-    --v8-card-soft: #E8DFC7;
-    --v8-subtle: rgba(30, 22, 15, 0.75);
-    --v8-hairline: rgba(30, 22, 15, 0.12);
-    --v8-work-bg: #E0D6BF;
-    --v8-on-accent: #FEFBF2;
+    --v8-bg: #FAFAFA;
+    --v8-text: #18181B;
+    --v8-card: #FFFFFF;
+    --v8-card-soft: #F5F5F4;
+    --v8-subtle: rgba(24, 24, 27, 0.6);
+    --v8-hairline: rgba(24, 24, 27, 0.08);
+    --v8-work-bg: #F0F0EE;
+    --v8-on-accent: #FFFFFF;
     --v8-accent: #E8621B;
-    --v8-dark-card: #14100c;
+    --v8-dark-card: #18181B;
     --v8-status: #4A7C48;
   }
 }
