@@ -2,7 +2,7 @@ export const siteContent = {
   name: "Patrick Allen",
   role: "Design Engineer",
   location: "Remote · UK",
-  status: "Available now · taking on work",
+  status: "Available · taking on work",
   handle: "@patrickallen",
 
   bio: "Designer + engineer in one brain. I take a thing and make it good — end to end, without being managed. A decade of it, lately in audio & podcasting.",
@@ -29,6 +29,17 @@ export const siteContent = {
       "I design and build digital products end-to-end. No handoff, no \"waiting on dev,\" nothing lost in translation. I work with founders and small software teams who need someone who can hold the whole picture, from the first Figma frame to the deployed thing running in production.",
   },
 
+  manifesto: {
+    p1: "I'm Patrick — an extra pair of hands that designs and builds products end-to-end. A decade of it, mostly at small teams where one person holding the whole picture matters more than an org chart.",
+    p2: "You're shipping fast with a small team. The product works — but there's a backlog of polish that never gets the attention it deserves. The flow that's almost right. The feature that's been \"next quarter\" for three quarters. The screens that look like engineers built them.",
+  },
+
+  closing: {
+    text: "I move fast while keeping the highest level of craft, attention to detail and performance.",
+    cta: "Your product deserves to feel designed.",
+    link: "Book a call →",
+  },
+
   problem:
     "You're shipping fast with a small team. The product works, but there's a backlog of things that never get the polish they deserve — the flow that's almost right, the feature that's been 'next quarter' for three quarters, the screens that look like engineers built them.\n\nYou don't have a spare designer. You don't want the overhead of a hire or the layers of an agency. You just need someone who can take a thing and make it good, end to end, without being managed.",
 
@@ -45,15 +56,25 @@ export const siteContent = {
       subtitle: "1–2 weeks",
       description:
         "Fixed scope and price. One specific thing, designed and shipped — the easiest way to try working together.",
+      breakdown: [
+        { label: "scope", text: "Agree the one thing and what \"done\" looks like" },
+        { label: "build", text: "Heads-down, designed and built end-to-end" },
+        { label: "handoff", text: "In your repo, walkthrough included" },
+      ],
     },
     embed: {
       title: "Or embed for a stretch.",
       subtitle: "4–12 weeks",
       description:
-        "An extra senior pair of hands on your roadmap, by the week. Weekly delivery, async-first.",
+        "An extra senior pair of hands on your roadmap, by the week.",
+      breakdown: [
+        { label: "embed", text: "Week 1, learn the team and the product" },
+        { label: "ship", text: "Weeks 2+, weekly delivery, async-first" },
+        { label: "handoff", text: "Your team owns everything" },
+      ],
     },
     walkAway:
-      "What you walk away with: shipped features every week, work that looks designed not assembled, a clean handoff, and a product that moved while your team kept its focus.",
+      "What you walk away with: shipped features every week, work that looks designed not assembled, a clean handoff — and a product that moved while your team kept its focus.",
   },
 
   work: [
@@ -123,6 +144,10 @@ export const siteContent = {
   ],
 
   pricing: {
+    sprint: {
+      amount: "Quoted per project",
+      line: "Fixed scope and price. You know the number before we start.",
+    },
     contract: {
       amount: "£450",
       unit: "+ VAT · per day",
