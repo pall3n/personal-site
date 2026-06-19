@@ -46,7 +46,7 @@ export const siteContent = {
   socialProof: {
     quote:
       "Extremely competent in both UI/UX design and technical implementation...",
-    name: "James Bree",
+    name: "James",
     role: "Solutions Architect",
   },
 
@@ -171,7 +171,7 @@ export const siteContent = {
       {
         k: "02",
         t: "Design + build in one brain",
-        d: "No Figma-to-Jira tax, no handoff meetings, no 'that's not quite what I meant.' The person making the pixel decisions is the person writing the JSX.",
+        d: "No Figma-to-Jira tax, no handoff meetings. The person solving the design problems is the person writing the JSX.",
       },
     ],
   },
