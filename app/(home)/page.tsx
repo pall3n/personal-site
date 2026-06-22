@@ -4,6 +4,7 @@ import FAQ from "@/components/faq";
 import CTAFooter from "@/components/ctaFooter";
 import Text from "@/components/text";
 import Skills from "@/components/skills";
+import AvailableNow from "@/components/availableNow";
 
 
 const work = [
@@ -58,13 +59,7 @@ export default function Home() {
             </div> */}
             <Skills />
 
-            <a
-              href="https://calendly.com/heypatrick/30min"
-              target="_blank"
-              rel="noopener noreferrer" className="hidden md:flex items-center gap-2">
-              <span className="w-2.5 h-2.5 bg-green-500 rounded-full inline-block"></span>
-              Available Now
-            </a>
+            <AvailableNow />
           </div>
 
           <div className="flex flex-col gap-10 md:gap-16 lg:gap-20 mt-20 md:mt-30 lg:mt-40">
@@ -132,7 +127,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20">
               <div className="">
-                <Text as="h3" type="subheading">Start with a sprint.</Text>
+                <Text as="h3" type="copy">Start with a sprint.</Text>
                 <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Scoped deliverable. Simplest way to try working together.</Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
@@ -156,7 +151,7 @@ export default function Home() {
               </div>
 
               <div className="">
-                <Text as="h3" type="subheading">Embed for a stretch.</Text>
+                <Text as="h3" type="copy">Embed for a stretch.</Text>
                 <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">An extra senior pair of hands on your roadmap.</Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
