@@ -31,16 +31,16 @@ export default function CTAFooter() {
             }`}
       >
          <div
-            className={`inline-block rounded-full p-1.5 bg-stone-50/50 dark:bg-stone-800/50 backdrop-blur-sm shadow-lg shadow-stone-200/70 dark:shadow-stone-800`}
+            className={`inline-block rounded-full p-2 bg-stone-50/50 dark:bg-stone-800/50 backdrop-blur-sm shadow-lg- shadow-stone-200/70 dark:shadow-stone-800`}
          >
             <a
                href="https://calendly.com/heypatrick/30min"
                target="_blank"
                rel="noopener noreferrer"
-               className="inline-flex items-center gap-4 pointer-events-auto text-indigo-700 dark:text-indigo-100 border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900 hover:bg-indigo-100 dark:hover:bg-indigo-800 hover:border-indigo-300 hover:text-indigo-800 hover:dark:text-indigo-100 transition-all duration-300 px-5 py-3 rounded-full"
+               className="inline-flex items-center gap-3 pointer-events-auto font-bold text-indigo-50 dark:text-indigo-900 border border-indigo-700 dark:border-indigo-50 bg-indigo-700 dark:bg-indigo-50 hover:bg-indigo-600 dark:hover:bg-indigo-100 hover:border-indigo-300 hover:-rotate-1 transition-all duration-300 px-5 py-3 rounded-full"
             >
-               Book a Discovery Call
-               <FileVideoCameraIcon className="w-5 h-5" />
+               <FileVideoCameraIcon className="w-6 h-6" /> Book a Discovery Call
+
             </a>
          </div>
       </div>

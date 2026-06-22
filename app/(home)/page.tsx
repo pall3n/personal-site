@@ -81,7 +81,7 @@ export default function Home() {
             <p
               className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
             >
-              Pulling all of that together pulls a small team off its roadmap. That's where I come in. I work in your team, or beside it, and own a piece of it end to end, so the rest of you keep shipping.
+              Pulling all of that together pulls a small team off its roadmap. That's where I come in. I work in your team, or beside it, and own a piece of it end to end, so the rest of you keep focus.
             </p>
 
             {/* <p

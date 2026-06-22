@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="row-start-3 flex gap-6 md:gap-16 flex-wrap items-center justify-center py-4 sm:py-6 px-8 mt-12 md:mt-20 lg:mt-30 border-t border-stone-100 dark:border-stone-800">
+    <footer className="row-start-3 max-w-[920px] mx-auto flex gap-6 md:gap-16 flex-wrap items-center justify-between py-4 sm:py-6 px-8 mt-12 md:mt-20 lg:mt-30 border-t border-stone-100 dark:border-stone-800">
       <div className="text-sm text-stone-500 dark:text-stone-400">
-        Copyright © {new Date().getFullYear()} Patrick Allen. All rights
+        © {new Date().getFullYear()} Patrick Allen. All rights
         reserved.
       </div>
 
