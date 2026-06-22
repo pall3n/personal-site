@@ -25,7 +25,7 @@ export default function PortfolioView({
   };
 }) {
   return (
-    <section className="py-8 px-8">
+    <section className="py-16 text-semibold">
       <PortfolioViewHeader
         title={project.title}
         subtitle={project.subtitle}
@@ -41,7 +41,7 @@ export default function PortfolioView({
             caption={section.caption || ""}
           >
             {section.content.map((item, index) => (
-              <Text key={index}>{item}</Text>
+              <Text key={index} type="copy" as="p">{item}</Text>
             ))}
           </PortfolioViewSection>
         ))}

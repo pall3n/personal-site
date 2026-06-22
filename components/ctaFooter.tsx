@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 import { FileVideoCameraIcon } from "lucide-react";
 
-export default function CTAFooter() {
+export default function CTAFooter({ targetId }: { targetId: string }) {
    const [visible, setVisible] = useState(false);
 
    useEffect(() => {
-      const target = document.getElementById("leverage");
+      const target = document.getElementById(targetId);
       if (!target) return;
 
       const observer = new IntersectionObserver(

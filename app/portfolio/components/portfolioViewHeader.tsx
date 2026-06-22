@@ -17,21 +17,21 @@ export default function PortfolioViewHeader({
   }[];
 }) {
   return (
-    <div>
-      <div className="max-w-screen-sm px-6 mx-auto">
-        <div className="flex items-center gap-1.5 text-xs font-medium">
+    <div className="text-semibold">
+      <div className="px-8 max-w-[920px] mx-auto">
+        <div className="flex items-center gap-1.5 text-sm font-semibold">
           <Link
             href="/portfolio"
             className=" text-stone-700 dark:text-stone-300 hover:text-stone-800 dark:hover:text-stone-50 transition-all duration-300"
           >
             Projects
           </Link>
-          <ArrowRightIcon className="w-3 h-3 flex-shrink-0 stroke-stone-400 dark:stroke-stone-500" />
+          <ArrowRightIcon className="w-3 h-3 flex-shrink-0 stroke-stone-400/70 dark:stroke-stone-500" />
           <div className="text-stone-500 dark:text-stone-400">{title}</div>
         </div>
       </div>
 
-      <div className="max-w-screen-sm px-6 mx-auto mt-16 space-y-1">
+      <div className="max-w-[920px] px-6 mx-auto mt-20 md:mt-30 lg:mt-40 space-y-4-">
         {/* {image && (
           <div className="rounded-2xl h-32 overflow-hidden mb-8">
             <img
@@ -42,29 +42,30 @@ export default function PortfolioViewHeader({
           </div>
         )} */}
 
-        <Text as="h1" size="text-3xl">
+        <Text as="h1" type="subheading">
           {title}
         </Text>
-        <Text as="p" size="text-xl">
+        <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
           {subtitle}
         </Text>
       </div>
 
       {snapshot && (
-        <div className="max-w-screen-sm px-6 mx-auto mt-8 lg:mt-10 border-y border-dashed border-stone-100 dark:border-stone-800">
-          <div className="flex flex-col gap-2- divide-y divide-dashed divide-stone-100 dark:divide-stone-800">
+        <div className="max-w-[920px] px-6 mx-auto mt-12 lg:mt-24">
+          <div className="flex flex-col gap-2- divide-y-2 divide-stone-50 dark:divide-stone-800 border-y-2 border-stone-50 dark:border-stone-800">
             {snapshot.map((item, index) => (
               <div
                 key={index}
-                className="flex justify-between items-start gap-1 px-1 py-2.5 hover:bg-stone-50/75 transition-all duration-100"
+                className="flex justify-between items-start gap-1 px-2 py-4 hover:bg-stone-50/75 transition-all duration-100"
               >
                 <Text
-                  weight="font-medium"
-                  colour="text-stone-800 dark:text-stone-50"
+                  size="text-sm md:text-lg"
+                  className="!leading-normal tracking-tighter text-stone-800 dark:text-stone-50"
                 >
                   {item.label}
                 </Text>
-                <Text className="text-right">{item.copy}</Text>
+                <Text size="text-sm md:text-lg"
+                  className="!leading-normal tracking-tighter text-right">{item.copy}</Text>
               </div>
             ))}
           </div>

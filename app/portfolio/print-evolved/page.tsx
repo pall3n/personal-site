@@ -4,6 +4,7 @@ import PortfolioViewFooter from "../components/portfolioViewFooter";
 import Text from "@/components/text";
 import Bullets from "@/components/bullets";
 import Footer from "@/components/footer";
+import CTAFooter from "@/components/ctaFooter";
 
 const project = {
   title: "Print Evolved - Internal Production Tools",
@@ -135,7 +136,7 @@ export default function PortfolioPrint() {
     <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
         {/* <PortfolioView project={project} /> */}
-        <section className="py-8 px-8">
+        <section className="py-16 px-8">
           <PortfolioViewHeader
             title={project.title}
             subtitle={project.subtitle}
@@ -143,9 +144,10 @@ export default function PortfolioPrint() {
             image={project.image}
           />
 
-          <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
+          <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-20 md:mt-30 lg:mt-40">
             {/* Section About */}
             <PortfolioViewSection
+              id="overview"
               title="Overview"
               images={project.sections[0]?.images || []}
               caption="Screens from the SKU creation wizard."
@@ -181,6 +183,7 @@ export default function PortfolioPrint() {
 
             {/* Section Problem */}
             <PortfolioViewSection
+              id="problem"
               title="Problem"
               imageGrid={project.sections[1]?.images || []}
               caption="Screens from the orders list with and batch invoice creation."
@@ -292,6 +295,7 @@ export default function PortfolioPrint() {
         </section>
       </main>
 
+      <CTAFooter targetId="overview" />
       <Footer />
     </div>
   );

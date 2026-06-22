@@ -2,11 +2,12 @@ import Image from "next/image";
 import Footer from "@/components/footer";
 import FAQ from "@/components/faq";
 import CTAFooter from "@/components/ctaFooter";
-
+import Text from "@/components/text";
+import Skills from "@/components/skills";
 
 
 const work = [
-  "/images/work/image-1.png",
+  "/images/projects/print-evolved/preview.png",
   "/images/work/image-2.png",
   "/images/work/image-3.png",
   "/images/work/image-4.png",
@@ -48,13 +49,14 @@ export default function Home() {
             {/* <div className="lg:text-xl mt-1 text-stone-500 dark:text-stone-400">
               Senior Frontend Developer and UI Designer.
             </div> */}
-            <div className="flex gap-3 md:gap-5 text-[13px] md:text-md lg:text-lg text-stone-500/70 dark:text-stone-400">
+            {/* <div className="flex gap-3 md:gap-5 text-[13px] md:text-md lg:text-lg font-bold text-stone-500/70 dark:text-stone-400">
               <div className="text-stone-800 dark:text-stone-50">Design Engineer</div>
               <div className="">TypeScript</div>
               <div className="">Next.js</div>
               <div className="">Figma</div>
               <div className="">AI</div>
-            </div>
+            </div> */}
+            <Skills />
 
             <a
               href="https://calendly.com/heypatrick/30min"
@@ -66,23 +68,20 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col gap-10 md:gap-16 lg:gap-20 mt-20 md:mt-30 lg:mt-40">
-            <p
+            {/* <p
               className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
             >
               I'm Patrick Allen, for a decade I've designed and built delightful products in small teams.
-            </p>
+            </p> */}
+            <Text as="p" type="heading">I'm Patrick <img src="/images/avatar.jpg" alt="Patrick Allen" className="w-8 h-8 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full inline-block" />, for a decade I've designed and built delightful products in small teams.</Text>
 
-            <p
-              className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
-            >
+            <Text as="p" type="heading">
               Building a great product takes more than design and code. Research. The right problem. A solution that fits. Performance that holds. And the bit of joy that brings people back.
-            </p>
+            </Text>
 
-            <p
-              className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
-            >
+            <Text as="p" type="heading">
               Pulling all of that together pulls a small team off its roadmap. That's where I come in. I work in your team, or beside it, and own a piece of it end to end, so the rest of you keep focus.
-            </p>
+            </Text>
 
             {/* <p
                 className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
@@ -91,25 +90,25 @@ export default function Home() {
               </p> */}
 
             <div id="leverage" className="flex flex-col gap-6 border-y-4 border-stone-100/60 dark:border-stone-700 py-16 md:py-20 lg:py-24 my-6 md:my-8 lg:my-10">
-              <p className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter">
+              <Text as="p" type="heading">
                 Leverage.
-              </p>
+              </Text>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 lg:text-xl !leading-normal">
                 <div className="">
-                  <h3 className="">AI-paired, human-owned.</h3>
-                  <p className="text-stone-500/70 dark:text-stone-400 mt-1">Claude drafts, I review and edit. That's 2 to 3x output without the slop, and every line of code gets read by me before it gets committed.</p>
+                  <Text as="h3" type="copy">AI-paired, human-owned.</Text>
+                  <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Claude drafts, I review and edit. That's 2 to 3x output without the slop, and every line of code gets read by me before it gets committed.</Text>
                 </div>
                 <div className="">
-                  <h3 className="">Design and build in one brain.</h3>
-                  <p className="text-stone-500/70 dark:text-stone-400 mt-1">No Figma-to-Jira tax, no handoff meetings, no "that's not quite what I meant." The person making the pixel decisions is the person writing the JSX.</p>
+                  <Text as="h3" type="copy">Design and build in one brain.</Text>
+                  <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">No Figma-to-Jira tax, no handoff meetings, no "that's not quite what I meant." The person making the pixel decisions is the person writing the JSX.</Text>
                 </div>
               </div>
             </div>
 
-            <p className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400">
+            <Text as="p" type="heading" colour="text-stone-500/70 dark:text-stone-400">
               <span className="text-stone-800 dark:text-stone-50">Recently.</span> Building internal platforms running key parts of a £20m+ business, and <a href="https://pontus.fm" target="_blank" rel="noopener noreferrer" className="underline hover:text-stone-800 dark:hover:text-stone-50">pontus.fm</a>, my own product.
-            </p>
+            </Text>
           </div>
         </section>
 
@@ -127,16 +126,14 @@ export default function Home() {
 
         <section className="py-16 px-8 max-w-[920px] mx-auto">
           <div className="flex flex-col gap-10 md:gap-16 mt-20 md:mt-40">
-            <p
-              className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
-            >
+            <Text as="p" type="heading">
               Working together. Two ways in. Shipped features either way.
-            </p>
+            </Text>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20">
               <div className="">
-                <h3 className="text-lg lg:text-2xl !leading-normal">Start with a sprint.</h3>
-                <p className="lg:text-xl !leading-normal text-stone-500/70 dark:text-stone-400">Scoped, specific deliverable. The easiest way to try working together.</p>
+                <Text as="h3" type="subheading">Start with a sprint.</Text>
+                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Scoped deliverable. Simplest way to try working together.</Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
                   <div className="flex gap-2">
@@ -159,8 +156,8 @@ export default function Home() {
               </div>
 
               <div className="">
-                <h3 className="text-lg lg:text-2xl !leading-normal">Or embed for a stretch.</h3>
-                <p className="lg:text-xl !leading-normal text-stone-500/70 dark:text-stone-400">An extra senior pair of hands on your roadmap.</p>
+                <Text as="h3" type="subheading">Embed for a stretch.</Text>
+                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">An extra senior pair of hands on your roadmap.</Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
                   <div className="flex gap-2">
@@ -184,111 +181,43 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col gap-10 md:gap-12 border-y-4 border-stone-100/60 dark:border-stone-700 py-16 md:py-20 lg:py-20 my-6 md:my-8 lg:my-14">
-              <p
-                className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
-              >
+              <Text as="p" type="heading">
                 Right fit.
-              </p>
+              </Text>
 
-              <p
-                className="text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400"
-              >
+              <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
                 <span className="text-stone-800 dark:text-stone-50">01.</span> You're a small software team shipping fast, and the "we'll get to it" backlog never gets got to.
-              </p>
+              </Text>
 
-              <p
-                className="text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400"
-              >
+              <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
                 <span className="text-stone-800 dark:text-stone-50">02.</span> You've got a conversion or growth problem that's really a UX problem in disguise.
-              </p>
+              </Text>
 
-              <p
-                className="text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400"
-              >
+              <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
                 <span className="text-stone-800 dark:text-stone-50">03.</span> You're in audio, podcasting, or creator tools and want someone who already knows the space.
-              </p>
+              </Text>
 
-              <p
-                className="text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400"
-              >
+              <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
                 <span className="text-stone-800 dark:text-stone-50">04.</span> You need design and engineering in one brain, without a hire or an agency layer.
-              </p>
+              </Text>
 
-              <p
-                className="text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter text-stone-500/70 dark:text-stone-400"
-              >
+              <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
                 <span className="text-stone-800 dark:text-stone-50">05.</span> You've got a specific feature or flow that needs to ship, not eventually.
-              </p>
+              </Text>
             </div>
 
             <div className="flex flex-col gap-10 md:gap-12">
-              <p
-                className="text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter"
-              >
+              <Text as="h3" type="heading">
                 Questions.
-              </p>
+              </Text>
 
               <FAQ />
             </div>
           </div>
         </section>
-
-        {/* <section className="py-16 px-8 max-w-screen-sm mx-auto">
-          <h2 className="text-2xl text-stone-800 dark:text-stone-50">
-            Pricing
-          </h2>
-
-          <div className="flex flex-col gap-8 md:gap-10 mt-4 sm:mt-6">
-            <div className="flex flex-col gap-4 md:gap-6 lg:text-lg lg:leading-snug-">
-              <div className="text-stone-500 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">
-                  Build Week:&nbsp;
-                </span>
-                You probably know exactly what the problem is. The flow that confuses users. The page that never converted. The feature that shipped but never quite landed.
-              </div>
-
-              <div className="text-stone-500 dark:text-stone-400">
-                I take one focused problem, design the solution and build it — in a single week. No lengthy project, no slow back-and-forth. And because I design and build, nothing gets lost in handoff. You end the week with something working, not something waiting.
-              </div>
-
-              <div className="flex flex-col gap-2  text-stone-500 dark:text-stone-400">
-                <div className="text-stone-800 dark:text-stone-50">
-                  This works well if you're:
-                </div>
-                <ul className="list-disc list-inside- ml-6 space-y-2 marker:text-stone-300 dark:marker:text-stone-500">
-                  <li>
-                    Sitting on a UX problem you keep de-prioritising
-                  </li>
-                  <li>
-                    Not happy with something AI shipped and nobody knows how to improve
-                  </li>
-                  <li>
-                    A growing product where the experience hasn't kept up with the features
-                  </li>
-                  <li>A founder or small team that needs to move fast</li>
-                </ul>
-              </div>
-
-              <div className="text-stone-800 dark:text-stone-50 mt-2">
-                From £2,500 +VAT
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-8 md:mt-12">
-            <a
-              href="https://calendly.com/heypatrick/30min"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-indigo-700 dark:text-indigo-100 border border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-900 hover:bg-indigo-100 dark:hover:bg-indigo-800 hover:border-indigo-300 hover:text-indigo-800 hover:dark:text-indigo-100 transition-all duration-300 px-5 py-3 rounded-md"
-            >
-              Request a Discovery Call
-            </a>
-          </div>
-        </section> */}
       </main >
 
-      <CTAFooter />
+      <CTAFooter targetId="leverage" />
       <Footer />
     </div >
   );
