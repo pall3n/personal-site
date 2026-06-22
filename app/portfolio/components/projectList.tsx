@@ -40,7 +40,7 @@ export default function ProjectList({
     <div>
       {showHeader && (
         <div className="flex flex-col">
-          <Text as="h2" className="text-sm uppercase font-semibold">
+          <Text as="h2" className="text-md font-semibold">
             Selected Projects
           </Text>
         </div>
@@ -58,6 +58,7 @@ export default function ProjectList({
             index={index}
             hideProjectIndex={hideProjectIndex}
             inline={inline}
+            key={index}
           />
         ))}
       </div>
@@ -96,9 +97,9 @@ const ProjectItem = ({
         className="w-full h-auto rounded-xl ring-0 group-hover:ring-4 ring-offset-2 ring-stone-100 transition-all duration-300"
       />
 
-      <div className="flex items-center justify-between gap-1 px-2 py-3">
+      <div className="flex items-center justify-between gap-1 px-2 py-3 mt-1 md:mt-2">
         <div className="flex gap-1.5">
-          <span className="text-stone-800 dark:text-stone-50 font-medium">
+          <span className="text-lg md:text-xl text-stone-800 dark:text-stone-50 font-semibold">
             {item.label}
           </span>
         </div>

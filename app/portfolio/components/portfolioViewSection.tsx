@@ -3,12 +3,14 @@ import ImageGrid from "@/components/imageGrid";
 import Text from "@/components/text";
 
 export default function PortfolioViewSection({
+  id = "",
   title,
   images,
   imageGrid,
   caption,
   children,
 }: {
+  id?: string;
   title: string;
   images?: { src: string; alt: string }[];
   imageGrid?: { src: string; alt: string }[];
@@ -16,14 +18,14 @@ export default function PortfolioViewSection({
   children: React.ReactNode;
 }) {
   return (
-    <div className="space-y-8 md:space-y-10 lg:space-y-14">
+    <div id={id} className="space-y-8 md:space-y-10 lg:space-y-14">
       {images && <CarouselComponent images={images} caption={caption} />}
 
       {imageGrid && <ImageGrid images={imageGrid} />}
 
       <div className="max-w-screen-sm mx-auto px-6">
         {title && (
-          <Text as="h2" className="text-sm uppercase font-semibold">
+          <Text as="h2" type="copy" className="">
             {title}
           </Text>
         )}

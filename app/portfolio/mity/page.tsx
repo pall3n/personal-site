@@ -4,6 +4,7 @@ import PortfolioViewFooter from "../components/portfolioViewFooter";
 import Text from "@/components/text";
 import Bullets from "@/components/bullets";
 import Footer from "@/components/footer";
+import CTAFooter from "@/components/ctaFooter";
 
 const project = {
   title: "Mity V2",
@@ -84,7 +85,7 @@ export default function PortfolioPodcastApp() {
   return (
     <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
       <main>
-        <section className="py-8 px-8">
+        <section className="py-16 px-8">
           <PortfolioViewHeader
             title={project.title}
             subtitle={project.subtitle}
@@ -92,9 +93,10 @@ export default function PortfolioPodcastApp() {
             image={project.image}
           />
 
-          <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-6 md:mt-10 lg:mt-12 sm:mt-8">
+          <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-20 md:mt-30 lg:mt-40">
             {/* Section Overview */}
             <PortfolioViewSection
+              id="overview"
               title="Overview"
               imageGrid={project.sections[0]?.images || []}
               caption="Screens showing the user profile with community invite and coin buy screens."
@@ -218,6 +220,7 @@ export default function PortfolioPodcastApp() {
         </section>
       </main>
 
+      <CTAFooter targetId="overview" />
       <Footer />
     </div>
   );
