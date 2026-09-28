@@ -16,24 +16,12 @@ const work = [
   "/images/work/image-6.png",
 ];
 
-const pricing = [
-  {
-    headline: "Day Rate / Monthly Retainer:",
-    body: "For projects where the scope is loosely defined or if you are looking for an ongoing monthly contractor this could make the most sense.",
-    price: "£450 +VAT per day.",
-  },
-  {
-    headline: "Fixed Price:",
-    body: "For projects with clear scope of work, and clearly defined timeline a fixed price project can make sense.",
-    price: "From £2,000 +VAT.",
-  },
-];
 
 export default function Home() {
   return (
     <div className="bg-stone-50/50 dark:bg-stone-800 text-stone-800 dark:text-stone-400 font-semibold">
       <main>
-        <section className="py-16 px-8 max-w-[920px] mx-auto">
+        <section className="py-16 px-8 max-w-[1020px] mx-auto">
           <div className="flex  justify-between">
             {/* <Image
               src="/images/avatar.jpg"
@@ -92,7 +80,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 lg:text-xl !leading-normal">
                 <div className="">
                   <Text as="h3" type="copy">AI-paired, human-owned.</Text>
-                  <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Claude drafts, I review and edit. That's 2 to 3x output without the slop, and every line of code gets read by me before it gets committed.</Text>
+                  <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Claude drafts, I review and edit. Faster output without the slop, and every line of code gets read by me before it gets committed.</Text>
                 </div>
                 <div className="">
                   <Text as="h3" type="copy">Design and build in one brain.</Text>
@@ -107,6 +95,7 @@ export default function Home() {
           </div>
         </section>
 
+        {/* TODO: case study / teardown section */}
         <section className="max-w-screen-lg mx-auto grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-3 px-2 md:px-3 md:mt-4">
           {work.map((item, index) => (
             <div className="rounded-lg overflow-hidden" key={index}>
@@ -125,10 +114,39 @@ export default function Home() {
               Working together. Two ways in. Shipped features either way.
             </Text>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
+              <div className="">
+                <Text as="h3" type="copy">Ship every month.</Text>
+                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">
+                  Two days a month on your onboarding and activation. Small, reviewable improvements, no management overhead.
+                </Text>
+
+                <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
+                  <div className="flex gap-2">
+                    <dt className="min-w-24">Audit</dt>
+                    <dd className="text-stone-500/70 dark:text-stone-400">Day one: find the biggest drop-offs in your first-run experience</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt className="min-w-24">Ship</dt>
+                    <dd className="text-stone-500/70 dark:text-stone-400">One improvement cycle a month, as small reviewable PRs</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt className="min-w-24">Report</dt>
+                    <dd className="text-stone-500/70 dark:text-stone-400">A short async write-up: what changed, what to measure, what's next</dd>
+                  </div>
+                  <div className="flex gap-2">
+                    <dt className="min-w-24">Price</dt>
+                    <dd className="text-stone-500/70 dark:text-stone-400">
+                      From £950 +VAT per month (2 days)
+                      <span className="block text-sm mt-1">Starts with a one day audit, £450 +VAT.</span>
+                    </dd>
+                  </div>
+                </dl>
+              </div>
+
               <div className="">
                 <Text as="h3" type="copy">Start with a sprint.</Text>
-                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Scoped deliverable. Simplest way to try working together.</Text>
+                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">Fixed-scope deliverable. Simplest way to try working together.</Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
                   <div className="flex gap-2">
@@ -149,30 +167,6 @@ export default function Home() {
                   </div>
                 </dl>
               </div>
-
-              <div className="">
-                <Text as="h3" type="copy">Embed for a stretch.</Text>
-                <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">An extra senior pair of hands on your roadmap.</Text>
-
-                <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
-                  <div className="flex gap-2">
-                    <dt className="min-w-24">Embed</dt>
-                    <dd className="text-stone-500/70 dark:text-stone-400">Learn the team and the product</dd>
-                  </div>
-                  <div className="flex gap-2">
-                    <dt className="min-w-24">Ship</dt>
-                    <dd className="text-stone-500/70 dark:text-stone-400">Weekly delivery, async-first</dd>
-                  </div>
-                  <div className="flex gap-2">
-                    <dt className="min-w-24">Handoff</dt>
-                    <dd className="text-stone-500/70 dark:text-stone-400">Your team owns everything</dd>
-                  </div>
-                  <div className="flex gap-2">
-                    <dt className="min-w-24">Price</dt>
-                    <dd className="text-stone-500/70 dark:text-stone-400">£450 +VAT per day.</dd>
-                  </div>
-                </dl>
-              </div>
             </div>
 
             <div className="flex flex-col gap-10 md:gap-12 border-y-4 border-stone-100/60 dark:border-stone-700 py-16 md:py-20 lg:py-20 my-6 md:my-8 lg:my-14">
@@ -181,23 +175,23 @@ export default function Home() {
               </Text>
 
               <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">01.</span> You're a small software team shipping fast, and the "we'll get to it" backlog never gets got to.
+                <span className="text-stone-800 dark:text-stone-50">01.</span> You've got a conversion, activation or retention problem that's really a UX problem in disguise.
               </Text>
 
               <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">02.</span> You've got a conversion or growth problem that's really a UX problem in disguise.
+                <span className="text-stone-800 dark:text-stone-50">02.</span> You're a small B2B SaaS team shipping fast, and onboarding never gets the attention it needs.
               </Text>
 
               <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">03.</span> You're in audio, podcasting, or creator tools and want someone who already knows the space.
+                <span className="text-stone-800 dark:text-stone-50">03.</span> You need design and engineering in one brain, without a hire or an agency layer.
               </Text>
 
               <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">04.</span> You need design and engineering in one brain, without a hire or an agency layer.
+                <span className="text-stone-800 dark:text-stone-50">04.</span> You've got a specific feature or flow that needs to ship, not eventually.
               </Text>
 
               <Text as="p" type="subheading" colour="text-stone-500/70 dark:text-stone-400">
-                <span className="text-stone-800 dark:text-stone-50">05.</span> You've got a specific feature or flow that needs to ship, not eventually.
+                <span className="text-stone-800 dark:text-stone-50">05.</span> You're in audio, podcasting, or creator tools and want someone who already knows the space.
               </Text>
             </div>
 

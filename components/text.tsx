@@ -34,14 +34,14 @@ export default function Text({
   // } else if (as === "h2" || as === "h3") {
   //   weight = "font-semibold";
   // }
-  weight = "font-semibold";
+  weight = "font-semibold-";
 
   if (type === "heading") {
-    size = "text-2xl md:text-4xl lg:text-5xl !leading-normal tracking-tighter";
+    size = "text-2xl md:text-3xl lg:text-4xl 2xl:text-5xl !leading-normal- !leading-tight tracking-tighter-";
   } else if (type === "subheading") {
-    size = "text-xl md:text-3xl lg:text-4xl !leading-normal tracking-tighter";
+    size = "text-xl md:text-2xl lg:text-3xl 2xl:text-4xl !leading-normal- !leading-tight tracking-tighter-";
   } else if (type === "copy") {
-    size = "text-lg md:text-xl lg:text-2xl !leading-normal tracking-tighter";
+    size = "text-lg md:text-xl lg:text-[1.625rem] 2xl:text-2xl !leading-normal- !leading-tight- !leading-[1.4] tracking-tighter-";
   }
 
   const defaultColour = "text-stone-500/70 dark:text-stone-400";

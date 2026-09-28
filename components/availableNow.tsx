@@ -13,7 +13,7 @@ export default function AvailableNow() {
             className="hidden md:flex items-center gap-2 cursor-pointer"
          >
             <span className="w-2.5 h-2.5 bg-green-500 rounded-full inline-block"></span>
-            Available Now
+            Limited Availability
          </button>
 
          {isCalendlyOpen && (

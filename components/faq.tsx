@@ -10,11 +10,23 @@ const items = [
    },
    {
       q: "What kinds of engagement do you take?",
-      a: "A 1 to 2 week sprint to ship one specific thing, a flow, a new feature, or embedded by the week. If you are not sure which? Book a call and we'll work it out.",
+      a: "A fixed-scope sprint to ship one specific thing, or 2 days a month on an ongoing basis. If you are not sure which? Book a call and we'll work it out.",
+   },
+   {
+      q: "How does the monthly work?",
+      a: "Two days a month on an agreed improvement cycle. I pick the highest-leverage item on your onboarding or activation flow, ship it as a small reviewable PR, and send a short async note on what changed and what to measure next. One call a month at most, everything else async, one month notice either way.",
+   },
+   {
+      q: "What if we need more than two days a month?",
+      a: "The monthly is capped at two days so it stays reliable. For a bigger piece of work, a sprint is the better fit, and the two can run side by side.",
+   },
+   {
+      q: "Do we need analytics in place?",
+      a: "It helps. If you already track activation in PostHog, Mixpanel, Amplitude or similar, we start there. If not, I'll set up basic tracking as part of the first audit.",
    },
    {
       q: "Do you work with people already on the team?",
-      a: "Yes, often. I pair well. I can also work alone if that's what you need.",
+      a: "Yes. I work alongside your engineers, mostly async, with someone on your side reviewing my PRs. I can also take a self-contained piece and run with it alone.",
    },
    {
       q: "What's your stack?",
