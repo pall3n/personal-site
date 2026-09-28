@@ -118,7 +118,7 @@ export default function Home() {
               <div className="">
                 <Text as="h3" type="copy">Ship every month.</Text>
                 <Text as="p" type="copy" colour="text-stone-500/70 dark:text-stone-400">
-                  Two days a month on your onboarding and activation. Small, reviewable improvements, no management overhead.
+                  Two days a month on your onboarding and activation, no management overhead.
                 </Text>
 
                 <dl className="flex flex-col gap-2 md:gap-3 mt-4 md:mt-8">
