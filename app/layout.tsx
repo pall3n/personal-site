@@ -1,19 +1,52 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Montserrat } from "next/font/google";
+import { Inter, Instrument_Serif, JetBrains_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import Fathom from "../components/fathom";
 
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-sans" });
-const serif = Instrument_Serif({ weight: ["400"], style: ["normal", "italic"], subsets: ["latin"], variable: "--font-serif" });
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-home-sans",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-home-display",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-home-mono",
+  display: "swap",
+});
+
+const siteTitle = "Product Design & Engineering for SaaS Teams | Patrick Allen";
+const siteDescription =
+  "I help small SaaS teams find and fix frustrating product experiences. Focused UX, onboarding and frontend improvements, from idea to implementation.";
 
 export const metadata: Metadata = {
-  title: "Patrick Allen: Design Engineer",
-  description: "Senior Design Engineer for B2B SaaS teams. Onboarding, activation and product engineering with TypeScript, Next.js and React.",
+  title: siteTitle,
+  description: siteDescription,
+  metadataBase: new URL("https://patrickallen.xyz"),
   openGraph: {
-    description: "Senior Design Engineer for B2B SaaS teams. Onboarding, activation and product engineering with TypeScript, Next.js and React.",
+    title: siteTitle,
+    description: siteDescription,
+    url: "https://patrickallen.xyz/",
+    type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
   },
   twitter: {
-    description: "Senior Design Engineer for B2B SaaS teams. Onboarding, activation and product engineering with TypeScript, Next.js and React.",
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/og.png"],
   },
 };
 
@@ -23,8 +56,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+    <html lang="en-GB">
+      <body
+        className={`${montserrat.className} ${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased`}
+      >
         <Fathom />
         {children}
       </body>

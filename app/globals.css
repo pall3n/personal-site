@@ -58,6 +58,25 @@
     --radius: 0.5rem;
 
     --font-serif: "Instrument Serif", serif;
+
+    /* Option C (homepage) tokens */
+    --canvas: #F9F8F5;
+    --surface: #FFFFFF;
+    --ink: #202421;
+    --soft: #4A524E;
+    --home-muted: #68736E;
+    --line: #EBE9E3;
+    --line-strong: #D8D6CF;
+    --placeholder: #EFEEE9;
+    --home-accent: #346E62;
+    --container: 1160px;
+    --gutter: clamp(16px, 4vw, 48px);
+    --section-y: clamp(56px, 7vw, 96px);
+    --radius-sm: 8px;
+    --radius-btn: 10px;
+    --radius-card: 16px;
+    --radius-media: 14px;
+    --ease: cubic-bezier(.2, .7, .2, 1);
   }
 
   .dark {

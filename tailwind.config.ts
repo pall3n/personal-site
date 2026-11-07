@@ -12,6 +12,9 @@ export default {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        "home-sans": ["var(--font-home-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        "home-display": ["var(--font-home-display)", "Georgia", "serif"],
+        "home-mono": ["var(--font-home-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
       },
       colors: {
         textLight: {
@@ -25,6 +28,15 @@ export default {
         textDark: {
           500: "#F5ECDB",
         },
+        canvas: "var(--canvas)",
+        surface: "var(--surface)",
+        ink: "var(--ink)",
+        soft: "var(--soft)",
+        "home-muted": "var(--home-muted)",
+        line: "var(--line)",
+        "line-strong": "var(--line-strong)",
+        placeholder: "var(--placeholder)",
+        "home-accent": "var(--home-accent)",
         v8: {
           bg: "var(--v8-bg)",
           text: "var(--v8-text)",
