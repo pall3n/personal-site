@@ -9,7 +9,7 @@ import { projects } from "./projects";
 export const metadata: Metadata = {
   title: "Selected Work | Patrick Allen",
   description:
-    "Case studies in product design and frontend engineering — internal tools, creator platforms and product prototypes.",
+    "Case studies in product design and frontend engineering; internal tools, creator platforms and product prototypes.",
 };
 
 export default function Portfolio() {
@@ -29,7 +29,7 @@ export default function Portfolio() {
               A few things I&apos;ve worked on.
             </h1>
             <p className="lede">
-              Case studies across SaaS products, operational tools and creator platforms —
+              Case studies across SaaS products, operational tools and creator platforms,
               designing the experience and building the interface.
             </p>
           </header>
@@ -50,7 +50,7 @@ export default function Portfolio() {
             </div>
           </section>
 
-          <ClosingCta />
+          {/* <ClosingCta /> */}
         </div>
       </main>
 

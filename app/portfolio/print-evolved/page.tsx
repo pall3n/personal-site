@@ -22,7 +22,7 @@ export default function PortfolioPrintEvolved() {
   return (
     <CaseStudyShell>
       <CaseHero
-        title="Print Evolved — Internal Production Tools"
+        title="Print Evolved, Internal Production Tools"
         subtitle="Designing and building multiple web apps to streamline high-volume print operations."
         snapshot={snapshot}
       />
@@ -62,7 +62,7 @@ export default function PortfolioPrintEvolved() {
         <p>
           Print Evolved relied on several ageing internal systems that split logic across
           multiple tools. Operators had to jump between interfaces depending on the
-          customer, carrier or product — creating confusion, inconsistent data and frequent
+          customer, carrier or product, creating confusion, inconsistent data and frequent
           batching/dispatch errors.
         </p>
         <p>

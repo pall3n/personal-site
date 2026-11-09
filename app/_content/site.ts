@@ -144,7 +144,7 @@ export const siteContent = {
     "You're a founder who wants design and engineering in one brain",
   ],
 
-  bio: "I'm Patrick. I've been designing and shipping software for about a decade — mostly for small teams where being able to do both matters. Before going independent I led product at a logistics platform that did £20m/yr. I live in the UK, I work remote, I bike a lot, and I've never sent a Loom longer than four minutes.",
+  bio: "I'm Patrick. I've been designing and shipping software for about a decade, mostly for small teams where being able to do both matters. Before going independent I led product at a logistics platform that did £20m/yr. I live in the UK, I work remote, I bike a lot, and I've never sent a Loom longer than four minutes.",
 
   faq: [
     // {

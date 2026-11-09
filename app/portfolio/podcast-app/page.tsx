@@ -42,7 +42,7 @@ export default function PortfolioPodcastApp() {
           This project explored how to combine podcast listening with a lightweight social
           layer that brings audiences and creators together. Alongside standard features
           like following, listening and queueing episodes, the app introduced community
-          interactions — comments, likes, clips, AMAs, polls — to help listeners engage
+          interactions, comments, likes, clips, AMAs, polls, to help listeners engage
           with each other and with podcasters.
         </p>
         <p>I led all UX and UI design and built the initial React Native prototype.</p>

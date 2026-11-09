@@ -46,7 +46,7 @@ export default function PortfolioMity() {
       >
         <p>
           Mity is a decentralised community platform built on the DeSo blockchain. The goal
-          was to create a place where communities can form, grow and share value — with
+          was to create a place where communities can form, grow and share value, with
           digital money features built directly into the core experience, not added as an
           afterthought.
         </p>
@@ -132,12 +132,12 @@ export default function PortfolioMity() {
           <li>connecting wallets without overwhelming users</li>
         </ul>
         <p>
-          The focus was on making crypto feel invisible — powerful but approachable.
+          The focus was on making crypto feel invisible, powerful but approachable.
         </p>
         <h3>3. App Store concept</h3>
         <p>
           I designed an early concept for a community-level App Store, enabling developers
-          to build modular extensions — from voting tools to premium access tiers — using
+          to build modular extensions, from voting tools to premium access tiers, using
           shared DeSo primitives.
         </p>
         <p>
@@ -165,7 +165,7 @@ export default function PortfolioMity() {
       <CaseSection id="close" label="04" title="Where it landed">
         <p>
           The work produced a working PWA MVP and a clearer product direction for a
-          community platform with ownership and economics built in — later refined in the
+          community platform with ownership and economics built in, later refined in the
           v2 exploration.
         </p>
       </CaseSection>

@@ -2,7 +2,7 @@ export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="container">
-        <p>Patrick Allen · Independent Product Engineer · UK-based</p>
+        <p>Patrick Allen · Product Engineer · UK-based</p>
         <nav aria-label="Footer">
           <a href="/portfolio/">Portfolio</a>
           <a
@@ -19,7 +19,7 @@ export default function SiteFooter() {
           >
             X
           </a>
-          <a href="mailto:hey@patrickallen.xyz">Email</a>
+          {/* <a href="mailto:hey@patrickallen.xyz">Email</a> */}
         </nav>
       </div>
     </footer>
