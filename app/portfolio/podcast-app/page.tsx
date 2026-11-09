@@ -1,229 +1,156 @@
-import PortfolioViewHeader from "../components/portfolioViewHeader";
-import PortfolioViewSection from "../components/portfolioViewSection";
-import PortfolioViewFooter from "../components/portfolioViewFooter";
-import Text from "@/components/text";
-import Bullets from "@/components/bullets";
-import Footer from "@/components/footer";
-import CTAFooter from "@/components/ctaFooter";
+import type { Metadata } from "next";
+import CaseStudyShell from "@/components/portfolio/case-study-shell";
+import CaseHero from "@/components/portfolio/case-hero";
+import CaseSection from "@/components/portfolio/case-section";
+import NextProjects from "@/components/portfolio/next-projects";
 
-const project = {
-  title: "Podcast App",
-  subtitle: "Bringing social layers to podcasts. ",
-  image: "/images/projects/podcast/preview.png",
-  snapshot: [
-    {
-      label: "Timeline",
-      copy: "2023",
-    },
-    {
-      label: "Role",
-      copy: "Product Designer & Front-End Developer",
-    },
-    {
-      label: "Delivery",
-      copy: "UX, UI, Prototyping + React Native implementation",
-    },
-    {
-      label: "Scope",
-      copy: "Podcast player, discovery feed, social features (likes, comments, clips, AMAs), queues, community interactions",
-    },
-  ],
-
-  sections: [
-    {
-      images: [
-        {
-          src: "/images/projects/podcast/podcast-screens-1.png",
-          alt: "Manual batch creation",
-          className: "col-span-2 rounded-xl",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/images/projects/podcast/podcast-screens-2.png",
-          alt: "Print Evolved",
-          className: "col-span-2 rounded-xl",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          src: "/images/projects/podcast/podcast-screens-3.png",
-          alt: "Print Evolved",
-          className: "col-span-2 rounded-xl",
-        },
-      ],
-    },
-  ],
+export const metadata: Metadata = {
+  title: "Podcast App | Patrick Allen",
+  description:
+    "Product design and React Native prototyping for a podcast app with listening, discovery and community features.",
 };
+
+const snapshot = [
+  { label: "Timeline", copy: "2023" },
+  { label: "Role", copy: "Product Designer & Front-End Developer" },
+  { label: "Delivery", copy: "UX, UI, Prototyping + React Native implementation" },
+  {
+    label: "Scope",
+    copy: "Podcast player, discovery feed, social features, queues, community interactions",
+  },
+];
 
 export default function PortfolioPodcastApp() {
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-white dark:bg-stone-900">
-      <main>
-        <section className="py-16 px-8">
-          <PortfolioViewHeader
-            title={project.title}
-            subtitle={project.subtitle}
-            snapshot={project.snapshot}
-            image={project.image}
-          />
+    <CaseStudyShell>
+      <CaseHero
+        title="Podcast App"
+        subtitle="Bringing social layers to podcasts."
+        snapshot={snapshot}
+      />
 
-          <div className="flex flex-col gap-24 md:gap-32 lg:gap-48 mt-20 md:mt-30 lg:mt-40">
-            {/* Section Overview */}
-            <PortfolioViewSection
-              id="overview"
-              title="Overview"
-              imageGrid={project.sections[0]?.images || []}
-              caption=""
-            >
-              <Text>
-                This project explored how to combine podcast listening with a
-                lightweight social layer that brings audiences and creators
-                together. Alongside standard features like following, listening
-                and queueing episodes, the app introduced community interactions
-                — comments, likes, clips, AMAs, polls — to help listeners engage
-                with each other and with podcasters.
-              </Text>
+      <CaseSection
+        id="overview"
+        label="01"
+        title="Overview"
+        featured={{
+          src: "/images/projects/podcast/podcast-screens-1.png",
+          alt: "Podcast app listening and feed screens",
+        }}
+      >
+        <p>
+          This project explored how to combine podcast listening with a lightweight social
+          layer that brings audiences and creators together. Alongside standard features
+          like following, listening and queueing episodes, the app introduced community
+          interactions — comments, likes, clips, AMAs, polls — to help listeners engage
+          with each other and with podcasters.
+        </p>
+        <p>I led all UX and UI design and built the initial React Native prototype.</p>
+      </CaseSection>
 
-              <Text>
-                I led all UX and UI design and built the initial React Native
-                prototype.
-              </Text>
-            </PortfolioViewSection>
+      <CaseSection
+        id="problem"
+        label="02"
+        title="Problem"
+        caption="Discovery and community screens from the podcast prototype."
+        featured={{
+          src: "/images/projects/podcast/podcast-screens-2.png",
+          alt: "Podcast app discovery and community screens",
+        }}
+      >
+        <p>
+          Podcast discovery is passive and slow. Listeners struggle to find new shows,
+          creators struggle to foster community and most apps isolate listening from social
+          interaction.
+        </p>
+        <p>The product aimed to solve this by:</p>
+        <ul>
+          <li>adding community features directly into the listening experience</li>
+          <li>making discovery active and dynamic, powered by social signals</li>
+          <li>giving creators a place to interact with their audience</li>
+          <li>letting listeners explore podcasts through generated previews</li>
+        </ul>
+      </CaseSection>
 
-            {/* Section Problem */}
-            <PortfolioViewSection
-              title="Problem"
-              imageGrid={project.sections[1]?.images || []}
-              caption="Screens showing course creation process."
-            >
-              <Text>
-                Podcast discovery is passive and slow. Listeners struggle to
-                find new shows, creators struggle to foster community and most
-                apps isolate listening from social interaction.
-              </Text>
+      <CaseSection
+        id="approach"
+        label="03"
+        title="Approach"
+        caption="Core listening, engagement and discovery flows."
+        featured={{
+          src: "/images/projects/podcast/podcast-screens-3.png",
+          alt: "Podcast app player and engagement screens",
+        }}
+      >
+        <h3>1. Define the structure</h3>
+        <p>We shaped the product around three pillars:</p>
+        <ul>
+          <li>Listen — follow shows, play episodes, build a queue</li>
+          <li>Engage — like, comment, vote, ask questions, join AMAs</li>
+          <li>
+            Discover — scroll through a feed of episode previews generated from transcripts
+            or metadata
+          </li>
+        </ul>
+        <p>These pillars guided the app’s navigation, interaction model and UI.</p>
+        <h3>2. Design the core listening experience</h3>
+        <p>I designed flows for:</p>
+        <ul>
+          <li>following shows and creators</li>
+          <li>playing episodes</li>
+          <li>queue management</li>
+          <li>lightweight interactions (likes, clips, shares) in the player</li>
+          <li>episode detail screens with discussion threads</li>
+        </ul>
+        <p>The player UI was built around clarity and quick actions.</p>
+        <h3>3. Add the community layer</h3>
+        <p>To bring listeners together, I designed:</p>
+        <ul>
+          <li>episode-level comment threads</li>
+          <li>simple upvotes and reactions</li>
+          <li>AMA boards where creators could answer listener questions</li>
+          <li>quick clip creation (highlight → clip) for sharing moments</li>
+          <li>basic user profiles</li>
+        </ul>
+        <h3>4. Build a dynamic discovery feed</h3>
+        <p>
+          The Discovery tab used episode metadata or auto-generated previews to create:
+        </p>
+        <ul>
+          <li>short audio snippets</li>
+          <li>teaser cards</li>
+          <li>simple episode summaries</li>
+          <li>quick “add to queue” actions</li>
+        </ul>
+        <h3>5. Prototype the full app</h3>
+        <p>
+          I created a high-fidelity Figma prototype and a functional React Native front-end
+          to test:
+        </p>
+        <ul>
+          <li>onboarding</li>
+          <li>feed behaviour</li>
+          <li>player interactions</li>
+          <li>comment flows</li>
+          <li>queue management</li>
+        </ul>
+        <p>
+          This allowed for early testing of engagement ideas and feed behaviour.
+        </p>
+      </CaseSection>
 
-              <Text>The product aimed to solve this by:</Text>
-              <Bullets
-                items={[
-                  "adding community features directly into the listening experience",
-                  "making discovery active and dynamic, powered by social signals",
-                  "giving creators a place to interact with their audience",
-                  "letting listeners explore podcasts through generated previews",
-                ]}
-              />
-            </PortfolioViewSection>
+      <CaseSection id="outcomes" label="04" title="Outcomes">
+        <ul>
+          <li>Full UX and UI for the MVP</li>
+          <li>Working React Native prototype covering core flows</li>
+          <li>
+            A cohesive product concept combining listening, discovery and social features
+          </li>
+          <li>Clear direction for future feature prioritisation</li>
+        </ul>
+      </CaseSection>
 
-            {/* Section Approach */}
-            <PortfolioViewSection
-              title="Approach"
-              imageGrid={project.sections[2]?.images || []}
-              caption="Screens showing the creator preview flows."
-            >
-              <Text as="h3" size="text-lg">
-                1. Define the structure
-              </Text>
-              <Text>We shaped the product around three pillars:</Text>
-              <Bullets
-                items={[
-                  "Listen — follow shows, play episodes, build a queue",
-                  "Engage - like, comment, vote, ask questions, join AMAs",
-                  "Discover — scroll through a feed of episode previews generated from transcripts or metadata",
-                ]}
-              />
-              <Text>
-                These pillars guided the app’s navigation, interaction model and
-                UI.
-              </Text>
-
-              <Text as="h3">2. Design the core listening experience</Text>
-              <Text>I designed flows for:</Text>
-              <Bullets
-                items={[
-                  "following shows and creators",
-                  "playing episodes",
-                  "queue management",
-                  "lightweight interactions (likes, clips, shares) in the player",
-                  "episode detail screens with discussion threads",
-                ]}
-              />
-              <Text>
-                The player UI was built around clarity and quick actions.
-              </Text>
-
-              <Text as="h3">3. Add the community layer</Text>
-              <Text>To bring listeners together, I designed:</Text>
-              <Bullets
-                items={[
-                  "episode-level comment threads",
-                  "simple upvotes and reactions",
-                  "AMA boards where creators could answer listener questions",
-                  "quick clip creation (highlight → clip) for sharing moments",
-                  "basic user profiles",
-                ]}
-              />
-
-              <Text as="h3">4. Build a dynamic discovery feed</Text>
-              <Text>
-                The Discovery tab used episode metadata or auto-generated
-                previews to create:
-              </Text>
-              <Bullets
-                items={[
-                  "short audio snippets",
-                  "teaser cards",
-                  "simple episode summaries",
-                  "quick “add to queue” actions",
-                ]}
-              />
-
-              <Text as="h3">5. Prototype the full app</Text>
-              <Text>
-                I created a high-fidelity Figma prototype and a functional React
-                Native front-end to test:
-              </Text>
-              <Bullets
-                items={[
-                  "onboarding",
-                  "feed behaviour",
-                  "player interactions",
-                  "comment flows",
-                  "queue management",
-                ]}
-              />
-              <Text>
-                This allowed for early testing of engagement ideas and feed
-                behaviour.
-              </Text>
-            </PortfolioViewSection>
-
-            {/* Section Outcomes */}
-            <PortfolioViewSection
-              title="Outcomes"
-              // images={project.sections[3]?.images || []}
-              caption=""
-            >
-              <Bullets
-                items={[
-                  "Full UX and UI for the MVP",
-                  "Working React Native prototype covering core flows",
-                  "A cohesive product concept combining listening, discovery and social features",
-                  "Clear direction for future feature prioritisation",
-                ]}
-              ></Bullets>
-            </PortfolioViewSection>
-          </div>
-
-          <PortfolioViewFooter hideProjectIndex={2} inline={true} />
-        </section>
-      </main>
-
-      <CTAFooter targetId="overview" />
-      <Footer />
-    </div>
+      <NextProjects currentSlug="podcast-app" />
+    </CaseStudyShell>
   );
 }

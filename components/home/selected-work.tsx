@@ -144,8 +144,8 @@ export default function SelectedWork() {
         </article>
       </div>
 
-      <a className="btn btn--secondary work-more" href="/portfolio">
-        Explore selected work
+    <a className="btn btn--secondary work-more" href="/portfolio/">
+      Explore selected work
         <ArrowIcon />
       </a>
     </section>

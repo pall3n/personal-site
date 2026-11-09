@@ -30,7 +30,7 @@ export default function Offers() {
           </div>
           <div className="offer-foot">
             <p>
-              <span className="price">From £650 +VAT</span>
+              <span className="price">From £550 +VAT</span>
               <span className="price-note">per fixed-scope engagement</span>
             </p>
             <CalendlyButton
@@ -65,7 +65,7 @@ export default function Offers() {
           </div>
           <div className="offer-foot">
             <p>
-              <span className="price">From £650/month +VAT</span>
+              <span className="price">From £500/month +VAT</span>
               <span className="price-note">One reserved day per month</span>
             </p>
             <CalendlyButton className="btn btn--primary btn--sm">

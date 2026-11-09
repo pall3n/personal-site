@@ -6,7 +6,7 @@ const faqs = [
   },
   {
     q: "Can you actually implement the changes?",
-    a: "Yes. I work across design and frontend engineering. Depending on the project, I can work in your existing React/Next.js codebase or provide designs ready for your team to implement.",
+    a: "Yes. I work across design and frontend engineering. Depending on the project, I can work in your existing Vue.js or React/Next.js codebase or provide designs ready for your team to implement.",
   },
   {
     q: "What if we don't know exactly what's wrong?",
